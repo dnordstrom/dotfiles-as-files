@@ -1,0 +1,35 @@
+#
+# Ayu Mirage
+#
+
+[options]
+font = Hack 8
+hyperlinks = true
+cursor_blink = off
+cell_width_scale = 1.3
+cell_height_scale = 1.4
+
+[colors]
+cursor = #ffcc66
+cursor_foreground = #ffcc66
+
+foreground = #bfbab0
+foreground_bold = #bfbab0
+background = rgba(31, 36, 48, 0.92)
+
+color0 = #1f2430
+color1 = #ff3333
+color2 = #bae67e
+color3 = #ffd580
+color4 = #73d0ff
+color5 = #f28779
+color6 = #95e6cb
+color7 = #ffffff
+color8 = #292b30
+color9 = #ff6666
+color10 = #cee6ac
+color11 = #ffe6b3
+color12 = #a6e1ff
+color13 = #ffd6da
+color14 = #ffffff
+color15 = #ffffff

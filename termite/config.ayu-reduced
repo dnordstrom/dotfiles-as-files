@@ -1,0 +1,36 @@
+#
+# Ayu Reduced
+# Brightness reduced by 10 on colors 0-15
+#
+
+[options]
+font = Hack 8
+hyperlinks = true
+cursor_blink = off
+cell_width_scale = 1.3
+cell_height_scale = 1.4
+
+[colors]
+cursor = #ffcc66
+cursor_foreground = #ffcc66
+
+foreground = #6c7680
+foreground_bold = #6c7680
+background = rgba(250, 250, 250, 0.92)
+
+color0 = #555d66
+color1 = #db1616
+color2 = #739900
+color3 = #e07e38
+color4 = #338ccc
+color5 = #d66565
+color6 = #338066
+color7 = #ffffff
+color8 = #b2b3ad
+color9 = #e63232
+color10 = #a6cc70
+color11 = #e69650
+color12 = #63bee6
+color13 = #d9796c
+color14 = #85ccb4
+color15 = #ffffff

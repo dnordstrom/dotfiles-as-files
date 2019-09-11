@@ -1,0 +1,35 @@
+#
+# Ayu
+#
+
+[options]
+font = Hack 8
+hyperlinks = true
+cursor_blink = off
+cell_width_scale = 1.3
+cell_height_scale = 1.4
+
+[colors]
+cursor = #6c7680
+cursor_foreground = #6c7680
+
+foreground = #6c7680
+foreground_bold = #bfbab0
+background = rgba(250, 250, 250, 0.92)
+
+color0 = #6c7680
+color1 = #f51818
+color2 = #86b300
+color3 = #fa8d3e
+color4 = #399ee6
+color5 = #f07171
+color6 = #4cbf99
+color7 = #ffffff
+color8 = #cbccc6
+color9 = #ff3333
+color10 = #bae67e
+color11 = #ffa759
+color12 = #73d0ff
+color13 = #f28779
+color14 = #95e6cb
+color15 = #ffffff

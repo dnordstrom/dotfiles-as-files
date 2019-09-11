@@ -1,0 +1,36 @@
+#
+# Ayu Dark
+# Dark version with Mirage as colors 8-15
+#
+
+[options]
+font = Hack 8
+hyperlinks = true
+cursor_blink = off
+cell_width_scale = 1.3
+cell_height_scale = 1.4
+
+[colors]
+cursor = #ffcc66
+cursor_foreground = #ffcc66
+
+foreground = #b3b1ad
+foreground_bold = #b3b1ad
+background = rgba(10, 14, 20, 0.92)
+
+color0 = #0a0e14
+color1 = #ff3333
+color2 = #c2d94c
+color3 = #ffb454
+color4 = #59c2ff
+color5 = #f07178
+color6 = #95e6cb
+color7 = #ffffff
+color8 = #1f2430
+color9 = #ff3333
+color10 = #bae67e
+color11 = #ffd580
+color12 = #73d0ff
+color13 = #f28779
+color14 = #95e6cb
+color15 = #ffffff
