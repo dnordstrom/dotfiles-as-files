@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DOTFILES_PATH="$(dirname $0)"
+
 # Set GTK3+ theme
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc"
@@ -13,4 +15,9 @@ kvantummanager --set KvArc
 
 # Copy and overwrite .Xdefaults
 
-cp -f "$(dirname $0)/Xdefaults/.Xdefaults.ayu-reduced" ~/.Xdefaults
+cp -f "$DOTFILES_PATH/Xdefaults/.Xdefaults.ayu-reduced" ~/.Xdefaults
+
+# Termite
+
+mkdir -p ~/.config/termite
+cp -f "$DOTFILES_PATH/termite/config.ayu-reduced" ~/.config/termite/config

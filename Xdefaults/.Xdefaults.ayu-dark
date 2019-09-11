@@ -1,6 +1,6 @@
 !
 ! Ayu Dark
-!   Dark version with Mirage as colors 8-15
+! Dark version with Mirage as colors 8-15
 !
 
 urxvt*font:             xft:Hack:size=8
@@ -13,7 +13,7 @@ urxvt*internalBorder:   16
 ! Special
 
 *.foreground:   #b3b1ad
-*.background:   #0a0e14
+*.background:   [92]#0a0e14
 *.cursorColor:  #e6b450
 
 ! Black
