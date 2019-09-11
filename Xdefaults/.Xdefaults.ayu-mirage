@@ -1,0 +1,63 @@
+!
+! Ayu Mirage
+!
+
+urxvt*font:             xft:Hack:size=8
+urxvt*termName:         rxvt
+urxvt*scrollBar:        false
+urxvt*depth:            32
+urxvt*lineSpace:	      4
+urxvt*internalBorder:   16
+
+! Special
+
+*.foreground:   #bfbab0
+*.background:   [92]#1f2430
+*.cursorColor:  #ffcc66
+
+! Black
+
+*.color0:       #1f2430
+*.color8:       #292b30
+
+! Red
+
+*.color1:       #ff3333
+*.color9:       #ff6666
+
+! Green
+
+*.color2:       #bae67e
+*.color10:      #cee6ac
+
+! Yellow
+
+*.color3:       #ffd580
+*.color11:      #ffe6b3
+
+! Blue
+
+*.color4:       #73d0ff
+*.color12:      #a6e1ff
+
+! Magenta
+
+*.color5:       #f28779
+*.color13:      #ffd6da
+
+! Cyan
+
+*.color6:       #95e6cb
+*.color14:      #ffffff
+
+! White
+
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+
+! Bold, Italic, Underline
+
+*.colorBD:     #e6e1cf
+!*.colorIT:
+!*.colorUL:

@@ -1,0 +1,63 @@
+!
+! Ayu
+!   Brightness reduced by 10 on colors 0-15
+!
+
+urxvt*font:             xft:Hack:size=8
+urxvt*termName:         rxvt
+urxvt*scrollBar:        false
+urxvt*depth:            32
+urxvt*lineSpace:        4
+urxvt*internalBorder:	  16
+
+! Special
+
+*.foreground:   #6c7680
+*.background:   [92]#fafafa
+*.cursorColor:  #6c7680
+
+! Black
+
+*.color0:       #555d66
+*.color8:       #b2b3ad
+
+! Red
+
+*.color1:       #db1616
+*.color9:       #e63232
+
+! Green
+
+*.color2:       #739900
+*.color10:      #a6cc70
+
+! Yellow
+
+*.color3:       #e07e38
+*.color11:      #e69650
+
+! Blue
+
+*.color4:       #338ccc
+*.color12:      #63bee6
+
+! Magenta
+
+*.color5:       #d66565
+*.color13:      #d9796c
+
+! Cyan
+
+*.color6:       #338066
+*.color14:      #85ccb4
+
+! White
+
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+! Bold, Italic, Underline
+
+*.colorBD:      #6c7680
+!*.colorIT:
+!*.colorUL:

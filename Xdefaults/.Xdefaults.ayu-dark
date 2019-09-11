@@ -1,0 +1,64 @@
+!
+! Ayu Dark
+!   Dark version with Mirage as colors 8-15
+!
+
+urxvt*font:             xft:Hack:size=8
+urxvt*termName:         rxvt
+urxvt*scrollBar:        false
+urxvt*depth:            32
+urxvt*lineSpace:	      4
+urxvt*internalBorder:   16
+
+! Special
+
+*.foreground:   #b3b1ad
+*.background:   #0a0e14
+*.cursorColor:  #e6b450
+
+! Black
+
+*.color0:       #0a0e14
+*.color8:       #1f2430
+
+! Red
+
+*.color1:       #ff3333
+*.color9:       #ff3333
+
+! Green
+
+*.color2:       #c2d94c
+*.color10:      #bae67e
+
+! Yellow
+
+*.color3:       #ffb454
+*.color11:      #ffd580
+
+! Blue
+
+*.color4:       #59c2ff
+*.color12:      #73d0ff
+
+! Magenta
+
+*.color5:       #f07178
+*.color13:      #f28779
+
+! Cyan
+
+*.color6:       #95e6cb
+*.color14:      #95e6cb
+
+! White
+
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+
+! Bold, Italic, Underline
+
+*.colorBD:      #b3b1ad
+!*.colorIT:
+!*.colorUL:

@@ -1,0 +1,21 @@
+configuration {
+  modi: "combi,window,drun,run";
+  lines: 6;
+  show-icons: true;
+  terminal: "urxvt";
+  run-shell-command: "{terminal} --window -- bash";
+  drun-icon-theme: "Papirus";
+  combi-modi: "window,drun,run";
+  hide-scrollbar: true;
+  window-format: "{c}    {t}";
+  theme: "theme.rasi";
+  combi-hide-mode-prefix: true;
+  display-window: "Windows";
+  display-windowcd: "Windows";
+  display-run: "Commands";
+  display-ssh: "SSH";
+  display-drun: "Applications";
+  display-combi: "All";
+  display-keys: "Keys";
+}
+

@@ -1,0 +1,62 @@
+!
+! Ayu
+!
+
+urxvt*font:             xft:Hack:size=8
+urxvt*termName:         rxvt
+urxvt*scrollBar:        false
+urxvt*depth:            32
+urxvt*lineSpace:        4
+urxvt*internalBorder:	  12
+
+! Special
+
+*.foreground:   #6c7680
+*.background:   #fafafa
+*.cursorColor:  #6c7680
+
+! Black
+
+*.color0:       #6c7680
+*.color8:       #cbccc6
+
+! Red
+
+*.color1:       #f51818
+*.color9:       #ff3333
+
+! Green
+
+*.color2:       #86b300
+*.color10:      #bae67e
+
+! Yellow
+
+*.color3:       #fa8d3e
+*.color11:      #ffa759
+
+! Blue
+
+*.color4:       #399ee6
+*.color12:      #73d0ff
+
+! Magenta
+
+*.color5:       #f07171
+*.color13:      #f28779
+
+! Cyan
+
+*.color6:       #4cbf99
+*.color14:      #95e6cb
+
+! White
+
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+! Bold, Italic, Underline
+
+*.colorBD:      #6c7680
+!*.colorIT:
+!*.colorUL:
