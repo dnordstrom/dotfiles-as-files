@@ -4,6 +4,8 @@
 
 gsettings set org.gnome.desktop.interface gtk-theme "Arc"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
+gsettings set org.gnome.desktop.interface font-name "Noto Sans Regular 10"
+gsettings set org.gnome.desktop.interface document-font-name "Noto Sans Regular 10"
 
 # Set KDE/Kvantum theme
 
