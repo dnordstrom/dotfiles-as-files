@@ -1,0 +1,11 @@
+[Desktop Entry]
+Exec=env GDK_BACKEND=x11 code-insiders Code/dotfiles
+Icon=settings
+Terminal=false
+Type=Application
+Name=Edit dotfiles
+Comment=Edit dotfiles
+Categories=Utility;
+MimeType=text/plain;inode/directory;
+StartupNotify=true
+StartupWMClass=code - insiders

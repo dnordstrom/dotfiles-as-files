@@ -23,20 +23,18 @@ set $right l
 
 # Workspace names
 
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
+set $workspace1 1
+set $workspace2 2
+set $workspace3 3
+set $workspace4 4
+set $workspace5 5
+set $workspace6 6
 
-# Terminal emulator
+# Applications
 
-set $term "urxvt"
-
-# Launcher
-
+set $term urxvt
 set $menu rofi -show combi | xargs swaymsg exec
+set $files nautilus
 
 
 
@@ -129,24 +127,22 @@ for_window [app_id="^.*"] inhibit_idle fullscreen
 # Key Binds
 #
 
-# New terminal window
-
-bindsym $mod+Return exec $term
-
-# Kill active window
-
-bindsym $mod+q kill
-
-# Start launcher
-
-bindsym $mod+d exec $menu
-bindsym $mod+space exec $menu
-
 # Drag windows by holding down $mod and left mouse button.
 # Resize with right mouse button + $mod.
 # Change normal to inverse to use left button for resizing.
 
 floating_modifier $mod normal
+
+# Applications
+
+bindsym $mod+Return exec $term
+bindsym $mod+d exec $menu
+bindsym $mod+space exec $menu
+bindsym $mod+g exec $files
+
+# Kill active window
+
+bindsym $mod+q kill
 
 # Reload configuration
 
