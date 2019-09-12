@@ -2,28 +2,35 @@
 # Ayu
 #
 
-set $accent_color #ff9940
-set $foreground_color #bfbab0
-set $active_foreground_color #6c7680
+set $border #ff9940
+set $foreground #6c7680
+set $foreground_inactive #bfbab0
 set $transparent #00000000
 
+# class
+#   border
+#   background
+#   text
+#   indicator
+#   child_border
+
 client.focused \
-  $accent_color \
-  $accent_color \
-  $active_foreground_color \
-  $accent_color \
-  $accent_color
+  $border \
+  $border \
+  $foreground \
+  $border \
+  $border
 
 client.unfocused \
   $transparent \
   $transparent \
-  $foreground_color \
+  $foreground_inactive \
   $transparent \
   $transparent
   
 client.focused_inactive \
   $transparent \
   $transparent \
-  $foreground_color \
+  $foreground_inactive \
   $transparent \
   $transparent
