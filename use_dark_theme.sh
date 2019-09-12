@@ -1,23 +1,28 @@
 #!/bin/bash
 
-DOTFILES_PATH="$(dirname $0)"
+FONT="SF Pro Text Regular 9"
+GTK_THEME="Arc-Dark"
+GTK_ICON_THEME="Papirus-Dark"
+GTK_SCHEMA="org.gnome.desktop.interface"
+KVANTUM_THEME="KvArcDark"
+SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # Set GTK3+ theme
 
-gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-gsettings set org.gnome.desktop.interface font-name "Noto Sans Regular 10"
-gsettings set org.gnome.desktop.interface document-font-name "Noto Sans Regular 10"
+gsettings set $GTK_SCHEMA gtk-theme "$GTK_THEME"
+gsettings set $GTK_SCHEMA icon-theme "$GTK_ICON_THEME"
+gsettings set $GTK_SCHEMA font-name "$FONT"
+gsettings set $GTK_SCHEMA document-font-name "$FONT"
 
 # Set KDE/Kvantum theme
 
-kvantummanager --set KvArcDark
+kvantummanager --set $KVANTUM_THEME
 
 # .Xdefaults
 
-cp -f "$DOTFILES_PATH/Xdefaults/.Xdefaults.ayu-mirage" ~/.Xdefaults
+ln -sf "$SCRIPT_PATH/Xdefaults/.Xdefaults.ayu-mirage" "$HOME/.Xdefaults"
 
 # Termite
 
-mkdir -p ~/.config/termite
-cp -f "$DOTFILES_PATH/termite/config.ayu-mirage" ~/.config/termite/config
+mkdir -p "$HOME/.config/termite"
+ln -sf "$SCRIPT_PATH/termite/config.ayu-mirage" "$HOME/.config/termite/config"

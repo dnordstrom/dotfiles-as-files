@@ -14,7 +14,7 @@ urxvt*internalBorder:	  16
 
 *.foreground:   #6c7680
 *.background:   [92]#fafafa
-*.cursorColor:  #6c7680
+*.cursorColor:  #ff9940
 
 ! Black
 

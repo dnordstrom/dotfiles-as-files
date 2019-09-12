@@ -1,0 +1,308 @@
+#
+# Variables
+#
+
+# Font
+
+set $font SF Pro Text Regular 9
+
+# Color scheme
+
+set $colors ayu-mirage
+
+# Use super as modifier key (Mod1 for Alt)
+
+set $mod Mod4
+
+# Vim navigation keys
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Workspace names
+
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+
+# Terminal emulator
+
+set $term "urxvt"
+
+# Launcher
+
+set $menu rofi -show combi | xargs swaymsg exec
+
+
+
+#
+# Workspaces
+#
+
+workspace $workspace1 output DP-1
+workspace $workspace2 output DP-1
+workspace $workspace3 output DP-1
+workspace $workspace4 output DVI-D-1
+workspace $workspace5 output DVI-D-1
+workspace $workspace6 output DVI-D-1
+
+
+
+#
+# Output
+#
+
+# All monitors
+
+output * {
+  bg ~/Pictures/Wallpapers/boca.jpg fill
+}
+
+# Left monitor
+
+output DP-1 {
+  mode 1920x1080@144.001007Hz
+  position 0,0
+}
+
+# Right monitor
+
+output DVI-D-1 {
+  mode 1920x1080@60Hz
+  position 1920,0
+}
+
+
+
+#
+# Idle
+#
+
+# Turn off monitor after 5 minutes
+
+exec swayidle \
+  timeout 300 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"'
+
+# Unless a window is fullscreen
+
+for_window [class="^.*"] inhibit_idle fullscreen
+for_window [app_id="^.*"] inhibit_idle fullscreen
+	
+
+
+#
+# Input
+#   Read `man 5 sway-input` for more information.
+
+# Keyboard
+
+input "9456:322:Metadot_-_Das_Keyboard_D4269" {
+  repeat_delay 250
+  repeat_rate 35
+
+  xkb_options caps:escape
+}
+
+
+
+#
+# Key Binds
+#
+
+# New terminal window
+
+bindsym $mod+Return exec $term
+
+# Kill active window
+
+bindsym $mod+q kill
+
+# Start launcher
+
+bindsym $mod+d exec $menu
+bindsym $mod+space exec $menu
+
+# Drag windows by holding down $mod and left mouse button.
+# Resize with right mouse button + $mod.
+# Change normal to inverse to use left button for resizing.
+
+floating_modifier $mod normal
+
+# Reload configuration
+
+bindsym $mod+Shift+c reload
+
+# Log out
+
+bindsym $mod+Shift+e exec swaynag -t warning -m '' -b 'Log out' 'swaymsg exit'
+
+# Move focus
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move windows
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Focus workspace
+
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+
+# Move window to workspace
+
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+
+# Split horizontal or vertical
+
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Layout style
+
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+# Fullscreen
+
+bindsym $mod+Shift+f fullscreen
+
+# Floating mode
+
+bindsym $mod+f floating toggle
+
+# Swap focus between tiling area and floating area
+
+bindsym $mod+tab focus mode_toggle
+
+# Move focus to parent
+
+bindsym $mod+a focus parent
+
+
+
+#
+# Scratchpad
+#
+
+# Move to scratchpad
+
+bindsym $mod+Shift+minus move scratchpad
+
+# Cycle windows
+
+bindsym $mod+minus scratchpad show
+
+
+
+#
+# Resize Mode
+#
+
+mode "resize" {
+  bindsym $left resize shrink width 20px
+  bindsym $down resize grow height 20px
+  bindsym $up resize shrink height 20px
+  bindsym $right resize grow width 20px
+
+  bindsym Left resize shrink width 20px
+  bindsym Down resize grow height 20px
+  bindsym Up resize shrink height 20px
+  bindsym Right resize grow width 20px
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym Space mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+
+#
+# Status Bar
+#
+
+bar {
+  swaybar_command waybar
+}
+
+
+
+#
+# Appearance
+#
+
+font pango:$font
+
+gaps inner 12
+gaps outer 0
+
+default_border pixel 1
+
+
+#
+# Application Specific
+#
+
+for_window [class="qBittorrent"] floating enable
+for_window [class="^Steam$"] move window to workspace 5
+
+
+
+#
+# GTK & QT
+#
+
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+  gsettings set $gnome-schema gtk-theme "Arc-Dark"
+  gsettings set $gnome-schema icon-theme "Papirus-Dark"
+  gsettings set $gnome-schema cursor-theme "Adwaita"
+  gsettings set $gnome-schema font-name $font
+  gsettings set $gnome-schema document-font-name $font
+  
+  kvantummanager --set KvArcDark
+}
+
+
+
+#
+# Load other configuration files
+#
+
+include colors.$colors
+include /etc/sway/config.d/*

@@ -1,0 +1,74 @@
+/**
+ * Ayu style for Waybar
+ */
+
+* {
+  font-weight: 700;
+  font-family: Iosevka, sans-serif;
+  font-size: 12px;
+}
+
+#waybar {
+  background: transparent;
+  color: #6c7680;
+  transition: background-color .2s;
+}
+
+#waybar.ayu-mirage {
+  color: #bfbab0;
+}
+
+#waybar.ayu-dark {
+  color: #b3b1ad;
+}
+
+#workspaces button {
+  background: transparent;
+  border: none;
+  color: #6C7680;
+}
+
+#workspaces button.focused {
+  color: #ff9940;
+}
+
+#waybar.ayu-mirage #workspaces button.focused {
+  color: #ffcc66;
+}
+
+#waybar.ayu-dark #workspaces button.focused {
+  color: #e6b450;
+}
+
+#workspaces button.urgent {
+  color: #f51818;
+}
+
+#waybar.ayu-mirage #workspaces button.urgent {
+  color: #ff3333;
+}
+
+#waybar.ayu-dark #workspaces button.urgent {
+  color: #ff3333;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor {
+  padding: 0 10px;
+  margin: 0 4px;
+  color: #fafafa;
+}
+
+#workspaces button {
+  padding: 0 6px;
+}

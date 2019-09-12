@@ -1,23 +1,27 @@
 #!/bin/bash
 
-DOTFILES_PATH="$(dirname $0)"
+FONT="SF Pro Text Regular 9"
+GTK_THEME="Arc"
+GTK_ICON_THEME="Papirus"
+KVANTUM_THEME="KvArc"
+SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # Set GTK3+ theme
 
-gsettings set org.gnome.desktop.interface gtk-theme "Arc"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus"
-gsettings set org.gnome.desktop.interface font-name "Noto Sans Regular 10"
-gsettings set org.gnome.desktop.interface document-font-name "Noto Sans Regular 10"
+gsettings set $GTK_SCHEMA gtk-theme "$GTK_THEME"
+gsettings set $GTK_SCHEMA icon-theme "$GTK_ICON_THEME"
+gsettings set $GTK_SCHEMA font-name "$FONT"
+gsettings set $GTK_SCHEMA document-font-name "$FONT"
 
 # Set KDE/Kvantum theme
 
-kvantummanager --set KvArc
+kvantummanager --set $KVANTUM_THEME
 
 # Copy and overwrite .Xdefaults
 
-cp -f "$DOTFILES_PATH/Xdefaults/.Xdefaults.ayu-reduced" ~/.Xdefaults
+ln -sf "$SCRIPT_PATH/Xdefaults/.Xdefaults.ayu-reduced" "$HOME/.Xdefaults"
 
 # Termite
 
-mkdir -p ~/.config/termite
-cp -f "$DOTFILES_PATH/termite/config.ayu-reduced" ~/.config/termite/config
+mkdir -p "$HOME/.config/termite"
+ln -sf "$SCRIPT_PATH/termite/config.ayu-reduced" "$HOME/.config/termite/config"
