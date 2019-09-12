@@ -3,6 +3,7 @@
 #
 
 set $border #ffcc66
+set $border_inactive #191e2a
 set $foreground #6c7680
 set $foreground_inactive #bfbab0
 set $transparent #00000000
@@ -22,15 +23,16 @@ client.focused \
   $border
 
 client.unfocused \
-  $transparent \
-  $transparent \
+  $border_inactive \
+  $border_inactive \
   $foreground_inactive \
-  $transparent \
-  $transparent
+  $border_inactive \
+  $border_inactive
   
 client.focused_inactive \
-  $transparent \
-  $transparent \
+  $border_inactive \
+  $border_inactive \
   $foreground_inactive \
-  $transparent \
-  $transparent
+  $border_inactive \
+  $border_inactive
+  

@@ -41,6 +41,19 @@ set $menu rofi -show combi | xargs swaymsg exec
 
 
 #
+# Appearance
+#
+
+font pango:$font
+
+gaps inner 12
+gaps outer 0
+
+default_border pixel 1
+
+
+
+#
 # Workspaces
 #
 
@@ -54,7 +67,7 @@ workspace $workspace6 output DVI-D-1
 
 
 #
-# Output
+# Outputs
 #
 
 # All monitors
@@ -80,8 +93,8 @@ output DVI-D-1 {
 
 
 #
-# Input
-#   Read `man 5 sway-input` for more information.
+# Inputs
+#
 
 # Keyboard
 
@@ -89,7 +102,8 @@ input "9456:322:Metadot_-_Das_Keyboard_D4269" {
   repeat_delay 250
   repeat_rate 35
 
-  xkb_options caps:escape
+  xkb_layout us,se
+  xkb_options caps:escape,grp:menu_toggle 
 }
 
 
@@ -259,18 +273,6 @@ bar {
   swaybar_command waybar
 }
 
-
-
-#
-# Appearance
-#
-
-font pango:$font
-
-gaps inner 12
-gaps outer 0
-
-default_border pixel 2
 
 
 #
