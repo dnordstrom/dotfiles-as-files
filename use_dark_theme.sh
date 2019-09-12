@@ -18,9 +18,9 @@ gsettings set $GTK_SCHEMA document-font-name "$FONT"
 
 kvantummanager --set $KVANTUM_THEME
 
-# .Xdefaults
+# .Xdefaults (urxvt does not read .Xresources on launch)
 
-ln -sf "$SCRIPT_PATH/Xdefaults/.Xdefaults.ayu-mirage" "$HOME/.Xdefaults"
+ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-mirage" "$HOME/.Xdefaults"
 
 # Termite
 

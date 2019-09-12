@@ -19,7 +19,7 @@ kvantummanager --set $KVANTUM_THEME
 
 # Copy and overwrite .Xdefaults
 
-ln -sf "$SCRIPT_PATH/Xdefaults/.Xdefaults.ayu-reduced" "$HOME/.Xdefaults"
+ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-reduced" "$HOME/.Xdefaults"
 
 # Termite
 
