@@ -2,7 +2,8 @@
 # Aliases
 #
 
-alias edit-dotfiles="env GDK_BACKEND=x11 code-insiders ~/Code/dotfiles"
+alias code="env GDK_BACKEND=x11 code-insiders"
+alias edit-dotfiles="code ~/Code/dotfiles"
 
 
 
