@@ -4,7 +4,7 @@
 
 # Font
 
-set $font SF Pro Text Regular 9
+set $font SF Pro Text Semibold 9
 
 # Color scheme
 
@@ -44,7 +44,7 @@ set $files nautilus
 
 font pango:$font
 
-gaps inner 12
+gaps inner 16
 gaps outer 0
 
 default_border pixel 1

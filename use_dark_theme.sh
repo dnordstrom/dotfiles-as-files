@@ -2,7 +2,7 @@
 
 FONT="SF Pro Text Regular 9"
 GTK_THEME="Arc-Dark"
-GTK_ICON_THEME="Papirus-Dark"
+GTK_ICON_THEME="Tela-orange-dark"
 GTK_SCHEMA="org.gnome.desktop.interface"
 KVANTUM_THEME="KvArcDark"
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
