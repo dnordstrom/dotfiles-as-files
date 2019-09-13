@@ -1,0 +1,9 @@
+#
+# Termite
+#
+
+# Increase padding
+
+VteTerminal, vte-terminal {
+  padding: 12px 16px;
+}

@@ -275,6 +275,7 @@ bar {
 # Application Specific
 #
 
+for_window [class="^vlc$"] floating enable
 for_window [class="qBittorrent"] floating enable
 for_window [class="^Steam$"] move window to workspace 5
 
