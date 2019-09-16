@@ -1,9 +1,9 @@
 #!/bin/bash
 
 FONT="SF Pro Text Regular 9"
-GTK_THEME="Arc"
+GTK_THEME="Ayu"
 GTK_ICON_THEME="Papirus"
-KVANTUM_THEME="KvArc"
+KVANTUM_THEME="Ayu"
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # Set GTK3+ theme

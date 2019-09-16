@@ -66,7 +66,10 @@
 #idle_inhibitor {
   padding: 0 10px;
   margin: 0 4px;
-  color: #fafafa;
+
+  /* Dark backgrounds: Mirage #cbccc6, Dark #b3b1ad */
+  /* Light backgrounds: Ayu #667680 */
+  color: #cbccc6;
 }
 
 #workspaces button {
