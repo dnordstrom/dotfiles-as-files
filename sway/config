@@ -9,7 +9,7 @@ set $font SF Pro Text Semibold 9
 set $colors ayu-mirage
 
 # Background image
-set $background manuel-cosentino-n--CMLApjfI-unsplash.jpg
+set $background enso-edited.png
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
@@ -193,22 +193,15 @@ bindsym $mod+Shift+f fullscreen
 bindsym $mod+f floating toggle
 
 # Swap focus between tiling area and floating area
-bindsym $mod+tab focus mode_toggle
+bindsym $mod+a focus mode_toggle
 
 # Move focus to parent
-bindsym $mod+a focus parent
+bindsym $mod+u focus parent
 
-
-
-#
 # Scratchpad
-#
-
-# Move to scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Cycle windows
-bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+z move scratchpad
+bindsym $mod+z scratchpad show
+bindsym $mod+tab scratchpad show
 
 
 
