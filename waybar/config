@@ -25,7 +25,7 @@
     "spacing": 12
   },
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%-H:%M}",
     "format-alt": "{:%A, %B %-d}"
   }
 }
