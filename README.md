@@ -32,8 +32,8 @@ edited) or [this](https://i.imgur.com/gAIHyZ9.jpg)
 * Looks pretty nice with the default Arc themes as well, in my opinion.
 * [Am I seeing things?](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-neofetch.png)
 
-**Note:** Only the GTK and Kvantum themes have been edited from Arc, not stuff I
-don't use (XFWM, Konsole, etc.).
+**Note:** Only the GTK (and Kvantum) themes have been edited from Arc, not stuff I
+don't use (XFWM, etc.). I disable the rest when building the GTK theme.
 
 ## Screenshots
 
