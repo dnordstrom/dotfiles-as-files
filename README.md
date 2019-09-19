@@ -18,7 +18,7 @@ My first rice. I wanted to make it as simple and out of the way as possible, wit
 **GTK:** [Ayu-Mirage-Dark](https://github.com/dnordstrom/ayu-theme/tree/ayu-mirage)
 *(Customized [Arc](https://github.com/horst3180/arc-theme))*  
 **Kvantum:** [AyuMirage](https://github.com/dnordstrom/ayu-kde) *(Customized [Arc](https://github.com/PapirusDevelopmentTeam/arc-kde/tree/master/Kvantum))*  
-**Icons:** Papirus-Dark  
+**Icons:** [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)  
 **Wallpaper:**
 [This](https://hdwallsbox.com/circles-enso-minimalistic-wallpaper-94559) (color
 edited) or [this](https://i.imgur.com/gAIHyZ9.jpg)  
