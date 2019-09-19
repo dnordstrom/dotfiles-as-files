@@ -14,6 +14,7 @@
 }
 
 #window {
+  font: "SF Pro Text Regular 9";
   location: 0;
   background-color: @backgroundcolor;
   border-color: @accentcolor;
@@ -21,7 +22,6 @@
   border-radius: 0;
   padding: 16 14;
   width: 640;
-  font: "Noto Sans Regular 9";
 }
 
 #element {
