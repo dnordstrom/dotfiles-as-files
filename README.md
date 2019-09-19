@@ -5,7 +5,7 @@ existing configurations.
 
 ![Screenshot](https://i.imgur.com/Rsh1enR.png)
 
-My first rice. I wanted to make it as simple and out of the way as possible, with colors from the Ayu color schemes.
+My first rice. I wanted to make it as simple and out of the way as possible, with colors from the [Ayu color schemes](https://github.com/ayu-theme/ayu-colors).
 
 [More screenshots](https://imgur.com/a/wgzXalJ)  
 
@@ -16,8 +16,8 @@ My first rice. I wanted to make it as simple and out of the way as possible, wit
 **Bar:** Waybar  
 **Fonts:** SF Pro Text *(UI)*, Hack *(Terminal)*, Iosevka *(Bar)*  
 **GTK:** [Ayu-Mirage-Dark](https://github.com/dnordstrom/ayu-theme/tree/ayu-mirage)
-*(Customized Arc)*  
-**Kvantum:** [AyuMirage](https://github.com/dnordstrom/ayu-kde) *(Customized Arc)*  
+*(Customized [Arc](https://github.com/horst3180/arc-theme))*  
+**Kvantum:** [AyuMirage](https://github.com/dnordstrom/ayu-kde) *(Customized [Arc](https://github.com/PapirusDevelopmentTeam/arc-kde/tree/master/Kvantum))*  
 **Icons:** Papirus-Dark  
 **Wallpaper:**
 [This](https://hdwallsbox.com/circles-enso-minimalistic-wallpaper-94559) (color
