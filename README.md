@@ -34,3 +34,25 @@ edited) or [this](https://i.imgur.com/gAIHyZ9.jpg)
 
 **Note:** Only the GTK and Kvantum themes have been edited from Arc, not stuff I
 don't use (XFWM, Konsole, etc.).
+
+## Screenshots
+
+### Mirage
+
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-apps-launcher.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-code-launcher.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-comparison.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-main.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-media.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-neofetch.png)
+
+### Dark
+
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-dark-code-files.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-dark-comparison.png)
+
+### Light
+
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-light-code-files.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-light-comparison.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-light-firefox-term.png)
