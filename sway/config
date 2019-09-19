@@ -30,7 +30,7 @@ set $workspace6 6
 
 # Applications
 set $term urxvt
-set $menu rofi -show combi | xargs swaymsg exec
+set $menu rofi -show combi -m 1 | xargs swaymsg exec
 set $files nautilus
 
 
@@ -203,6 +203,11 @@ bindsym $mod+Shift+z move scratchpad
 bindsym $mod+z scratchpad show
 bindsym $mod+tab scratchpad show
 
+# Audio
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
 
 
 #
@@ -246,6 +251,7 @@ bar {
 for_window [class="^vlc$"] floating enable
 for_window [class="^qBittorrent$"] floating enable
 for_window [class="^dolphin$"] floating enable
+for_window [app_id="^org.gnome.Nautilus$"] floating enable
 for_window [class="^Steam$"] move window to workspace 5
 
 
