@@ -4,6 +4,7 @@ FONT="SF Pro Text Regular 9"
 GTK_THEME="Ayu"
 GTK_ICON_THEME="Papirus"
 KVANTUM_THEME="Ayu"
+GTK_SCHEMA="org.gnome.desktop.interface"
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # Set GTK3+ theme

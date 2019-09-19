@@ -9,7 +9,7 @@ set $font SF Pro Text Semibold 9
 set $colors ayu-mirage
 
 # Background image
-set $background enso-edited.png
+set $background enso-blue.png
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
