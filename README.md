@@ -31,3 +31,6 @@ edited) or [this](https://i.imgur.com/gAIHyZ9.jpg)
 * The fish prompt is "Robbyrussell" with the "dirty Git repo" glyph changed to a plus sign due to urxvt being a little bitch about it.
 * Looks pretty nice with the default Arc themes as well, in my opinion.
 * [Am I seeing things?](https://i.imgur.com/W0UD6vM.png)
+
+**Note:** Only the GTK and Kvantum themes have been edited from Arc, not stuff I
+don't use (XFWM, Konsole, etc.).
