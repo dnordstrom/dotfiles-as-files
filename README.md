@@ -7,7 +7,7 @@ existing configurations.
 
 My first rice. I wanted to make it as simple and out of the way as possible, with colors from the [Ayu color schemes](https://github.com/ayu-theme/ayu-colors).
 
-[More screenshots](https://imgur.com/a/wgzXalJ)  
+[More screenshots](https://github.com/dnordstrom/dotfiles#screenshots)  
 
 **OS:** Arch  
 **WM:** Sway  
