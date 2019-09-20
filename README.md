@@ -3,7 +3,7 @@
 **Warning:** The install scripts overwrite
 existing configurations.
 
-![Screenshot](https://i.imgur.com/Rsh1enR.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-main.png)
 
 My first rice. I wanted to make it as simple and out of the way as possible, with colors from the [Ayu color schemes](https://github.com/ayu-theme/ayu-colors).
 
@@ -47,7 +47,6 @@ don't use (XFWM, etc.). I disable the rest when building the GTK theme.
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-apps-launcher.png)
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-code-launcher.png)
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-comparison.png)
-![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-main.png)
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-media.png)
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-neofetch.png)
 
