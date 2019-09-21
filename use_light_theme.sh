@@ -16,7 +16,7 @@ gsettings set $GTK_SCHEMA document-font-name "$FONT"
 # Set KDE/Kvantum theme
 kvantummanager --set $KVANTUM_THEME
 
-# Copy and overwrite .Xdefaults
+# .Xdefaults (urxvt does not read .Xresources on launch)
 ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-reduced" "$HOME/.Xdefaults"
 
 # Termite
