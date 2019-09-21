@@ -13,7 +13,7 @@ gsettings set $GTK_SCHEMA icon-theme "$GTK_ICON_THEME"
 gsettings set $GTK_SCHEMA font-name "$FONT"
 gsettings set $GTK_SCHEMA document-font-name "$FONT"
 
-# Set KDE/Kvantum theme
+# Set Kvantum theme
 kvantummanager --set $KVANTUM_THEME
 
 # .Xdefaults (urxvt does not read .Xresources on launch)
