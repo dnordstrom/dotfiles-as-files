@@ -6,10 +6,10 @@
 set $font SF Pro Text Semibold 9
 
 # Color scheme
-set $colors ayu
+set $colors ayu-mirage
 
 # Background image
-set $background boca.jpg
+set $background enso-blue.png
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4

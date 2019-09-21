@@ -22,3 +22,5 @@ ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-reduced" "$HOME/.Xdefaults"
 # Termite
 mkdir -p "$HOME/.config/termite"
 ln -sf "$SCRIPT_PATH/termite/config.ayu-reduced" "$HOME/.config/termite/config"
+
+# Also change rofi theme and waybar class in their config files

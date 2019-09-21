@@ -1,10 +1,10 @@
 #!/bin/bash
 
 FONT="SF Pro Text Regular 9"
-GTK_THEME="Ayu-Dark"
+GTK_THEME="Ayu-Mirage-Dark"
 GTK_ICON_THEME="Papirus-Dark"
 GTK_SCHEMA="org.gnome.desktop.interface"
-KVANTUM_THEME="AyuDark"
+KVANTUM_THEME="AyuMirage"
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # Set GTK3+ theme
@@ -17,8 +17,10 @@ gsettings set $GTK_SCHEMA document-font-name "$FONT"
 kvantummanager --set $KVANTUM_THEME
 
 # .Xdefaults (urxvt does not read .Xresources on launch)
-ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-dark" "$HOME/.Xdefaults"
+ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-mirage" "$HOME/.Xdefaults"
 
 # Termite
 mkdir -p "$HOME/.config/termite"
-ln -sf "$SCRIPT_PATH/termite/config.ayu-dark" "$HOME/.config/termite/config"
+ln -sf "$SCRIPT_PATH/termite/config.ayu-mirage" "$HOME/.config/termite/config"
+
+# Also change rofi theme and waybar class in their config files
