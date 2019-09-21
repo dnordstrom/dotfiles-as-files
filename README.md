@@ -28,7 +28,9 @@ schemes](https://github.com/ayu-theme/ayu-colors).
 edited) or [this](https://i.imgur.com/gAIHyZ9.jpg)  
 **Dotfiles:** https://github.com/dnordstrom/dotfiles
 
-* GTK theme is a customized Arc with a few colors changed to match Ayu/Ayu-Mirage/Ayu-Dark (different Git branches). For QT, a customized Arc Kvantum theme (a tad bit too dark, SVG needs work).
+* GTK theme is a customized Arc with a few colors changed to match
+  Ayu/Mirage/Dark (in different Git branches). For QT, a customized Arc Kvantum
+  theme (a tad bit too dark, SVG needs work).
 * Papirus icons changed to orange with [papirus-folders](https://aur.archlinux.org/packages/papirus-folders-git/).
 * Created light, mirage, and dark versions for GTK (separate branches in the
   repo), QT, rofi, and Xresources. Haven't really used the light ones yet, so they
