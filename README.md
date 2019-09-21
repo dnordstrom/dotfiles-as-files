@@ -59,4 +59,4 @@ don't use (XFWM, etc.). I disable the rest when building the GTK theme.
 
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190921-light-code-files.png)
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-light-comparison.png)
-![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-light-firefox-term.png)
+![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190921-light-firefox-term.png)
