@@ -5,9 +5,11 @@ existing configurations.
 
 ![Screenshot](https://raw.githubusercontent.com/dnordstrom/dotfiles/master/screenshots/20190919-mirage-main.png)
 
-My first rice. I wanted to make it as simple and out of the way as possible, with colors from the [Ayu color schemes](https://github.com/ayu-theme/ayu-colors).
+My first rice. I wanted to make it as simple and out of the way as possible,
+with colors from the three different [Ayu color
+schemes](https://github.com/ayu-theme/ayu-colors).
 
-[More screenshots](https://github.com/dnordstrom/dotfiles#screenshots)  
+[Screenshots (mirage, dark, and light)](https://github.com/dnordstrom/dotfiles#screenshots)  
 
 **OS:** Arch  
 **WM:** Sway  
