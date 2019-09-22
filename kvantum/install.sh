@@ -1,3 +1,5 @@
+#!/bin/bash
+
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 ln -sf "$SCRIPT_PATH/Ayu" /usr/share/Kvantum/
