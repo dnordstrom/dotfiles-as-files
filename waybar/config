@@ -56,7 +56,7 @@
   "custom/terminal": {
     "format":"",
     "tooltip": false,
-    "on-click": "urxvt",
+    "on-click": "swaymsg scratchpad show",
     "on-click-right": "urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
   },
   "custom/weather": {
