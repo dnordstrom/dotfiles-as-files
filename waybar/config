@@ -13,8 +13,10 @@
     "custom/browser",
     "tray",
     "idle_inhibitor",
+    "custom/weather",
     "temperature",
     "pulseaudio",
+    "network",
     "custom/system"
   ],
   "sway/mode": {
@@ -36,7 +38,7 @@
   },
   "clock": {
     "format": "{:%-H:%M}",
-    "format-alt": "{:%A · %-H:%M · %B %-d}",
+    "format-alt": "{:%A · %B %-d · %-H:%M}",
     "tooltip": false
   },
   "custom/system": {
@@ -49,6 +51,11 @@
     "tooltip": false,
     "on-click": "bash -c 'if pgrep -x firefox-bin > /dev/null 2>&1; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi'",
     "on-click-right": "firefox-nightly --new-window"
+  },
+  "custom/weather": {
+    "exec":"curl wttr.in/Sundsvall?format=\"%c+%t\"",
+    "interval": 1800,
+    "tooltip": false
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -81,5 +88,13 @@
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°C"
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "",
+    "tooltip": false,
+    "max-length": 50
   }
 }
