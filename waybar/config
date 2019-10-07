@@ -4,14 +4,24 @@
   "position": "top",
   "height": 30,
   "width": 1920,
-  "modules-left": [ "sway/workspaces", "sway/mode" ],
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
   "modules-center": [ "clock" ],
-  "modules-right": [ "tray"],
+  "modules-right": [
+    "custom/browser",
+    "tray",
+    "idle_inhibitor",
+    "temperature",
+    "pulseaudio",
+    "custom/system"
+  ],
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
   },
   "sway/workspaces": {
-    "persistent_workspaces": {
+    "persistant_workspaces": {
       "1": [ "DP-1" ],
       "2": [ "DP-1" ],
       "3": [ "DP-1" ],
@@ -21,11 +31,55 @@
     }
   },
   "tray": {
-    "icon-size": 16,
+    "icon-size": 14,
     "spacing": 12
   },
   "clock": {
     "format": "{:%-H:%M}",
-    "format-alt": "{:%A, %B %-d}"
+    "format-alt": "{:%A · %-H:%M · %B %-d}",
+    "tooltip": false
+  },
+  "custom/system": {
+    "format":"",
+    "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl shutdown'",
+    "on-click-right": "swaymsg mode System"
+  },
+  "custom/browser": {
+    "format":"",
+    "tooltip": false,
+    "on-click": "bash -c 'if pgrep -x firefox-bin > /dev/null 2>&1; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi'",
+    "on-click-right": "firefox-nightly --new-window"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip": false,
+    "format-icons": {
+        "activated": "",
+        "deactivated": ""
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} ",
+    "format-muted": "",
+    "format-icons": {
+        "headphones": "",
+        "handsfree": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false
+  },
+  "temperature": {
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C ",
+    "format": " {temperatureC}°C"
   }
 }

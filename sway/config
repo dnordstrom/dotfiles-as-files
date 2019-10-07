@@ -9,7 +9,8 @@ set $font SF Pro Text Semibold 9
 set $colors ayu-mirage
 
 # Background image
-set $background enso-blue.png
+set $background andre-benz-cXU6tNxhub0-unsplash.jpg
+
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
@@ -28,7 +29,7 @@ set $workspace4 4
 set $workspace5 5
 set $workspace6 6
 
-# Applications
+# Commands
 set $term urxvt
 set $menu rofi -show combi -m 1 | xargs swaymsg exec
 set $files nautilus
@@ -136,9 +137,6 @@ bindsym $mod+q kill
 # Reload configuration
 bindsym $mod+Shift+c reload
 
-# Log out
-bindsym $mod+Shift+e exec swaynag -t warning -m '' -b 'Log out' 'swaymsg exit'
-
 # Move focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -214,7 +212,9 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # Resize Mode
 #
 
-mode "resize" {
+set $mode_resize Resize
+
+mode "$mode_resize" {
   bindsym $left resize shrink width 20px
   bindsym $down resize grow height 20px
   bindsym $up resize shrink height 20px
@@ -230,7 +230,37 @@ mode "resize" {
   bindsym Space mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "$mode_resize"
+
+
+
+#
+# System Mode
+#
+
+set $mode_system System
+
+mode "$mode_system" {
+  bindsym e exec swaymsg exit, mode "default"
+  bindsym s exec systemctl shutdown, mode "default"
+  bindsym r exec systemctl reboot, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym Space mode "default"
+}
+
+bindsym $mod+Delete mode "$mode_system"
+
+
+
+#
+# Autostart
+#
+
+# Open a terminal on scratchpad
+exec $term -T scratchpad_term
+for_window [title="scratchpad_term"] move scratchpad
 
 
 

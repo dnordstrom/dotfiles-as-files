@@ -3,7 +3,7 @@
  */
 
 * {
-  font-weight: 900;
+  font-weight: 700;
   font-family: Iosevka, sans-serif;
   font-size: 12px;
 }
@@ -26,6 +26,7 @@
   background: transparent;
   border: none;
   color: #6C7680;
+  padding: 0 6px;
 }
 
 #workspaces button.focused {
@@ -52,7 +53,6 @@
   color: #ff3333;
 }
 
-#clock,
 #battery,
 #cpu,
 #memory,
@@ -62,16 +62,20 @@
 #pulseaudio,
 #custom-media,
 #tray,
-#mode,
-#idle_inhibitor {
-  padding: 0 10px;
-  margin: 0 4px;
+#idle_inhibitor,
+#custom-browser,
+#custom-system {
+  padding: 0 8px;
 
   /* Dark backgrounds: Mirage #cbccc6, Dark #b3b1ad */
   /* Light backgrounds: Ayu #667680 */
   color: #cbccc6;
 }
 
-#workspaces button {
-  padding: 0 6px;
+#custom-browser span {
+  font-size: 120%;
+}
+
+#custom-system {
+  margin-right: 6px;
 }
