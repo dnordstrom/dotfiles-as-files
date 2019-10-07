@@ -49,11 +49,12 @@
   "custom/browser": {
     "format":"",
     "tooltip": false,
-    "on-click": "bash -c 'if pgrep -x firefox-bin > /dev/null 2>&1; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi'",
+    "on-click": "if pgrep -x firefox-bin > /dev/null 2>&1; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi",
     "on-click-right": "firefox-nightly --new-window"
   },
   "custom/weather": {
     "exec":"curl wttr.in/Sundsvall?format=\"%c+%t\"",
+    "on-click": "urxvt -hold -T weather_term -e curl wttr.in/Sundsvall",
     "interval": 1800,
     "tooltip": false
   },

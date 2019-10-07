@@ -18,6 +18,11 @@ alias remove-orphan-packages="sudo pacman -Rns (pacman -Qtdq)"
 function fish_greeting
 end
 
+# AUR helper
+function aur
+  cd $HOME/Downloads && git clone https://aur.archlinux.org/$argv.git && cd $argv && makepkg -si
+end
+
 
 
 #

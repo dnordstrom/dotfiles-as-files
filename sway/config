@@ -260,7 +260,7 @@ bindsym $mod+Delete mode "$mode_system"
 
 # Open a terminal on scratchpad
 exec $term -T scratchpad_term
-for_window [title="scratchpad_term"] move scratchpad
+for_window [title="^scratchpad_term$"] move scratchpad
 
 
 
@@ -284,6 +284,8 @@ for_window [class="^vlc$"] floating enable
 for_window [class="^qBittorrent$"] floating enable
 for_window [class="^dolphin$"] floating enable
 for_window [app_id="^org.gnome.Nautilus$"] floating enable
+for_window [title="^transparent_term$"] border none
+for_window [title="^weather_term$"] floating enable, resize set 910 720
 
 
 
