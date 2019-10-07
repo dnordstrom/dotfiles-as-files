@@ -69,7 +69,8 @@
 #custom-browser,
 #custom-terminal,
 #custom-weather,
-#custom-system {
+#custom-system,
+#mode {
   padding: 0 8px;
 }
 
