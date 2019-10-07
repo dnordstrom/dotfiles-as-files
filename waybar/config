@@ -6,11 +6,12 @@
   "width": 1920,
   "modules-left": [
     "sway/workspaces",
+    "custom/terminal",
+    "custom/browser",
     "sway/mode"
   ],
   "modules-center": [ "clock" ],
   "modules-right": [
-    "custom/browser",
     "tray",
     "idle_inhibitor",
     "custom/weather",
@@ -51,6 +52,12 @@
     "tooltip": false,
     "on-click": "if pgrep -x firefox-bin > /dev/null 2>&1; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi",
     "on-click-right": "firefox-nightly --new-window"
+  },
+  "custom/terminal": {
+    "format":"",
+    "tooltip": false,
+    "on-click": "urxvt",
+    "on-click-right": "urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
   },
   "custom/weather": {
     "exec":"curl wttr.in/Sundsvall?format=\"%c+%t\"",

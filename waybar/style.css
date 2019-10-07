@@ -11,7 +11,7 @@
 #waybar {
   background: transparent;
   color: #6c7680;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 #waybar.ayu-mirage {
@@ -22,10 +22,13 @@
   color: #b3b1ad;
 }
 
+#workspaces {
+  margin-right: 6px;
+}
+
 #workspaces button {
   background: transparent;
   border: none;
-  color: #6C7680;
   padding: 0 6px;
 }
 
@@ -64,17 +67,10 @@
 #tray,
 #idle_inhibitor,
 #custom-browser,
+#custom-terminal,
 #custom-weather,
 #custom-system {
   padding: 0 8px;
-
-  /* Dark backgrounds: Mirage #cbccc6, Dark #b3b1ad */
-  /* Light backgrounds: Ayu #667680 */
-  color: #cbccc6;
-}
-
-#custom-browser span {
-  font-size: 120%;
 }
 
 #custom-system {
