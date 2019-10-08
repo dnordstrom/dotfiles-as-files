@@ -44,7 +44,7 @@
   },
   "custom/system": {
     "format":"",
-    "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl shutdown'",
+    "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl poweroff'",
     "on-click-right": "swaymsg mode System"
   },
   "custom/browser": {

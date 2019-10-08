@@ -242,7 +242,7 @@ set $mode_system System
 
 mode "$mode_system" {
   bindsym e exec swaymsg exit, mode "default"
-  bindsym s exec systemctl shutdown, mode "default"
+  bindsym s exec systemctl poweroff, mode "default"
   bindsym r exec systemctl reboot, mode "default"
 
   bindsym Return mode "default"
