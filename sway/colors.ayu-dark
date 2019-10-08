@@ -3,7 +3,7 @@
 #
 
 set $border #e6b450
-set $border_inactive #01060e00
+set $border_inactive #01060e1a
 set $foreground #6c7680
 set $foreground_inactive #bfbab0
 set $transparent #00000000

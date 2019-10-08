@@ -1,13 +1,13 @@
 configuration {
-  modi: "combi,window,drun,run";
+  modi: "combi,drun,run,window";
   lines: 6;
   show-icons: true;
   terminal: "urxvt";
   run-shell-command: "{terminal} --window -- bash";
   drun-icon-theme: "Papirus-Dark";
-  combi-modi: "window,drun,run";
+  combi-modi: "drun,run";
   hide-scrollbar: true;
-  window-format: "{c}    {t}";
+  window-format: "{t}";
   theme: "ayu-mirage.rasi";
   combi-hide-mode-prefix: true;
   display-window: "Windows";
