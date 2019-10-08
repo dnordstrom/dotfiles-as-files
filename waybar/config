@@ -7,6 +7,7 @@
   "modules-left": [
     "sway/workspaces",
     "custom/terminal",
+    "custom/editor",
     "custom/browser",
     "sway/mode"
   ],
@@ -51,6 +52,12 @@
     "format":"",
     "tooltip": false,
     "on-click": "if pgrep -x firefox-bin > /dev/null 2>&1; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi",
+    "on-click-right": "firefox-nightly --new-window"
+  },
+  "custom/editor": {
+    "format":"",
+    "tooltip": false,
+    "on-click": "if pgrep -x code-insiders > /dev/null 2>&1; then swaymsg [title=\"Insiders\"] focus; else GDK_BACKEND=x11 code-insiders; fi",
     "on-click-right": "firefox-nightly --new-window"
   },
   "custom/terminal": {

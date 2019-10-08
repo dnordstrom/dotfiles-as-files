@@ -11,6 +11,10 @@ set $colors ayu-mirage
 # Background image
 set $background andre-benz-cXU6tNxhub0-unsplash.jpg
 
+# Alternatives:
+#   cheng-feng-39rjQQBw424-unsplash.jpg
+#   andre-benz-cXU6tNxhub0-unsplash.jpg
+
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
