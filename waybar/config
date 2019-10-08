@@ -9,6 +9,7 @@
     "custom/terminal",
     "custom/editor",
     "custom/browser",
+    "custom/files",
     "sway/mode"
   ],
   "modules-center": [ "clock" ],
@@ -53,6 +54,11 @@
     "tooltip": false,
     "on-click": "if pgrep -x firefox-bin > /dev/null 2>&1; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi",
     "on-click-right": "firefox-nightly --new-window"
+  },
+  "custom/files": {
+    "format":"",
+    "tooltip": false,
+    "on-click": "nautilus"
   },
   "custom/editor": {
     "format":"",
