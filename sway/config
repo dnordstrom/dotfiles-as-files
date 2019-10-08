@@ -284,7 +284,6 @@ bar {
 
 assign [class="^Steam$"] $workspace5
 
-for_window [class="^vlc$"] floating enable
 for_window [class="^dolphin$"] floating enable
 for_window [app_id="^org.gnome.Nautilus$"] floating enable
 for_window [title="^transparent_term$"] border none
