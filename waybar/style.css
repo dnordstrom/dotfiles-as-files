@@ -73,9 +73,17 @@
 #custom-weather,
 #custom-system,
 #mode {
-  padding: 0 8px;
+  padding: 0 10px;
+}
+
+#tray {
+  opacity: 0.8;
 }
 
 #custom-system {
   margin-right: 6px;
+}
+
+#workspaces {
+  margin: 0 3px 0 1px;
 }
