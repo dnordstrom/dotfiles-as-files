@@ -51,6 +51,8 @@ gaps outer 0
 
 default_border pixel 2
 
+seat seat0 xcursor_theme Quintom_Snow 24
+
 
 
 #
