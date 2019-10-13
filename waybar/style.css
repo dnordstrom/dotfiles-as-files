@@ -59,6 +59,7 @@
 #battery,
 #cpu,
 #memory,
+#disk,
 #temperature,
 #backlight,
 #network,
@@ -70,6 +71,7 @@
 #custom-terminal,
 #custom-files,
 #custom-editor,
+#custom-disks,
 #custom-weather,
 #custom-system,
 #mode {

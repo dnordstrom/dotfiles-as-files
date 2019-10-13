@@ -17,6 +17,9 @@
     "tray",
     "idle_inhibitor",
     "custom/weather",
+    "custom/disks",
+    "memory",
+    "cpu",
     "temperature",
     "pulseaudio",
     "network",
@@ -72,9 +75,23 @@
     "on-click": "swaymsg scratchpad show",
     "on-click-right": "urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
   },
+  "custom/disks": {
+    "exec":"df --output=avail -h \"$PWD\" | sed '1d;s/[^0-9]//g'",
+    "format": " {}GB",
+    "on-click": "urxvt -hold -T popup_term -e gotop",
+    "interval": 600,
+    "tooltip": false
+  },
+  "disk": {
+    "interval": 30,
+    "format": " {free}GB",
+	  "path": "/",
+    "on-click": "urxvt -hold -T popup_term -e gotop",
+    "tooltip": false
+  },
   "custom/weather": {
     "exec":"curl wttr.in/Sundsvall?format=\"%c+%t\"",
-    "on-click": "urxvt -hold -T weather_term -e curl wttr.in/Sundsvall",
+    "on-click": "urxvt -hold -T popup_term -e curl wttr.in/Sundsvall",
     "interval": 1800,
     "tooltip": false
   },
@@ -107,8 +124,14 @@
     "thermal-zone": 2,
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
+    "on-click": "urxvt -hold -T popup_term -e gotop",
     "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°C"
+  },
+  "cpu": {
+    "on-click": "urxvt -hold -T popup_term -e gotop",
+    "tooltip": false,
+    "format": " {}%"
   },
   "network": {
     "format": "{ifname}",
@@ -117,5 +140,9 @@
     "format-disconnected": "",
     "tooltip": false,
     "max-length": 50
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}GB"
   }
 }
