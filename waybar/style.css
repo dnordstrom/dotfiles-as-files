@@ -29,7 +29,7 @@
 #workspaces button {
   background: transparent;
   border: none;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 #workspaces button.focused {
