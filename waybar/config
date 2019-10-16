@@ -25,6 +25,10 @@
     "network",
     "custom/system"
   ],
+  "custom/separator": {
+    "format": "·",
+    "tooltip": false
+  },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
   },

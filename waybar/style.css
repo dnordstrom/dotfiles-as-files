@@ -74,8 +74,9 @@
 #custom-disks,
 #custom-weather,
 #custom-system,
+#custom-separator,
 #mode {
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
 #tray {
