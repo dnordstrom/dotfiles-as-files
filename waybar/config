@@ -44,7 +44,7 @@
   },
   "tray": {
     "icon-size": 14,
-    "spacing": 18
+    "spacing": 22
   },
   "clock": {
     "format": "{:%-H:%M}",
