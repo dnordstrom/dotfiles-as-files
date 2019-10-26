@@ -122,6 +122,7 @@
     },
     "scroll-step": 5,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
     "tooltip": false
   },
   "temperature": {
