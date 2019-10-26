@@ -9,7 +9,8 @@ alias start-plasma="kwin_wayland --drm --libinput --xwayland
 alias start-transparent-term="urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
 alias start-cava="urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term -e cava"
 alias remove-orphan-packages="sudo pacman -Rns (pacman -Qtdq)"
-
+alias set-cpu-performance="echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
+alias set-cpu-schedutil="echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
 
 
 #
