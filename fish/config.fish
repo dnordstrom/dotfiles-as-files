@@ -6,6 +6,8 @@ alias code="env GDK_BACKEND=x11 code-insiders"
 alias edit-dotfiles="code ~/Code/dotfiles"
 alias start-plasma="kwin_wayland --drm --libinput --xwayland
 /usr/lib64/startplasma"
+alias start-transparent-term="urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
+alias start-cava="urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term -e cava"
 alias remove-orphan-packages="sudo pacman -Rns (pacman -Qtdq)"
 
 
