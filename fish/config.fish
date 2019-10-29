@@ -35,6 +35,13 @@ end
 # Add Yarn global executables to path
 set -x PATH (yarn global bin) $PATH
 
+# Add Android SDK to path
+set -x ANDROID_HOME $HOME/Android/Sdk
+set -x PATH $ANDROID_HOME/emulator $PATH
+set -x PATH $ANDROID_HOME/tools $PATH
+set -x PATH $ANDROID_HOME/tools/bin $PATH
+set -x PATH $ANDROID_HOME/platform-tools $PATH
+
 # Configure `fuck` alias
 thefuck --alias | source
 
