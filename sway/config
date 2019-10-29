@@ -13,8 +13,10 @@ set $background andre-benz-cXU6tNxhub0-unsplash.jpg
 
 # Alternatives:
 #   cheng-feng-39rjQQBw424-unsplash.jpg
+#   andre-benz-qi2hmCwlhcE-unsplash.jpg
 #   andre-benz-cXU6tNxhub0-unsplash.jpg
-
+#   alex-knight-Ys-DBJeX0nE-unsplash.jpg
+#   israel-sundseth-BYu8ITUWMfc-unsplash.jpg (with bar background)
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4

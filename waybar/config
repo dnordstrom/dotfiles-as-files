@@ -83,7 +83,7 @@
     "exec":"df --output=avail -h \"$PWD\" | sed '1d;s/[^0-9]//g'",
     "format": " {}GB",
     "on-click": "urxvt -hold -T popup_term -e gotop",
-    "interval": 600,
+    "interval": 10,
     "tooltip": false
   },
   "disk": {
