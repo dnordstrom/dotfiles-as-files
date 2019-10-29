@@ -48,7 +48,7 @@
   },
   "clock": {
     "format": "{:%-H:%M}",
-    "format-alt": "{:%A · %-H:%M · %B %-d}",
+    "format-alt": "{:%A, %B %-d}",
     "tooltip": false
   },
   "custom/system": {
