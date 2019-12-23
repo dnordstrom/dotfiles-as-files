@@ -16,7 +16,7 @@
   "modules-right": [
     "tray",
     "idle_inhibitor",
-    "custom/weather",
+    "custom/darksky",
     "custom/disks",
     "memory",
     "cpu",
@@ -93,8 +93,14 @@
     "on-click": "urxvt -hold -T popup_term -e gotop",
     "tooltip": false
   },
-  "custom/weather": {
-    "exec":"curl wttr.in/Sundsvall?format=\"%c+%t\"",
+  "custom/wttr": {
+    "exec": "curl wttr.in/Sundsvall?format=\"%c+%t\"",
+    "on-click": "urxvt -hold -T popup_term -e curl wttr.in/Sundsvall",
+    "interval": 1800,
+    "tooltip": false
+  },
+  "custom/darksky": {
+    "exec": "/home/dnordstrom/Code/dotfiles/scripts/weather.sh",
     "on-click": "urxvt -hold -T popup_term -e curl wttr.in/Sundsvall",
     "interval": 1800,
     "tooltip": false
