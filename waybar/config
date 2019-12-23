@@ -59,8 +59,8 @@
   "custom/browser": {
     "format":"",
     "tooltip": false,
-    "on-click": "if pgrep -x firefox-bin; then swaymsg [class=\"Nightly\"] focus; else env GDK_BACKEND=x11 firefox-nightly; fi",
-    "on-click-right": "env GDK_BACKEND=x11 firefox-nightly --new-window"
+    "on-click": "if pgrep -x firefox-bin; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi",
+    "on-click-right": "firefox-nightly --new-window"
   },
   "custom/files": {
     "format":"",
@@ -71,7 +71,6 @@
     "format":"",
     "tooltip": false,
     "on-click": "if pgrep -x code-insiders > /dev/null 2>&1; then swaymsg [title=\"Insiders\"] focus; else GDK_BACKEND=x11 code-insiders; fi",
-    "on-click-right": "firefox-nightly --new-window"
   },
   "custom/terminal": {
     "format":"",
