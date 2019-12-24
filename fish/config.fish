@@ -5,7 +5,6 @@
 # Utilities
 alias remove-orphan-packages="sudo pacman -Rns (pacman -Qtdq)"
 alias test-speed="speedtest-cli --server 20602"
-alias untar="tar zxvf"
 
 # Launchers
 alias code="env GDK_BACKEND=x11 code-insiders"
