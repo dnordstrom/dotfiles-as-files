@@ -8,6 +8,8 @@
 # Source:
 # 	https://github.com/jp1995/dotfiles_old/blob/2ebe13d6077ec2adb81295124f008980c6c55de8/Programs/tint2/weather-git.sh
 
+set -e
+
 SCRIPT_PATH="$(dirname $(realpath -s $0))"
 ENV_FILE="$SCRIPT_PATH/.env"
 
