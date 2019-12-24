@@ -2,15 +2,22 @@
 # Aliases
 #
 
+# Utilities
+alias remove-orphan-packages="sudo pacman -Rns (pacman -Qtdq)"
+alias test-speed="speedtest-cli --server 20602"
+alias untar="tar zxvf"
+
+# Launchers
 alias code="env GDK_BACKEND=x11 code-insiders"
 alias edit-dotfiles="code ~/Code/dotfiles"
-alias start-plasma="kwin_wayland --drm --libinput --xwayland
-/usr/lib64/startplasma"
+alias start-plasma="kwin_wayland --drm --libinput --xwayland /usr/lib64/startplasma"
 alias start-transparent-term="urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
 alias start-cava="urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term -e cava"
-alias remove-orphan-packages="sudo pacman -Rns (pacman -Qtdq)"
+
+# CPU scheduling
 alias set-cpu-performance="echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
 alias set-cpu-schedutil="echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
+
 
 
 #
@@ -21,11 +28,6 @@ alias set-cpu-schedutil="echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/
 function fish_greeting
 end
 
-# AUR helper
-function aur
-  cd $HOME/Downloads && git clone https://aur.archlinux.org/$argv.git && cd $argv && makepkg -si
-end
-
 
 
 #
@@ -34,16 +36,6 @@ end
 
 # Add Yarn global executables to path
 set -x PATH (yarn global bin) $PATH
-
-# Add Android SDK to path
-set -x ANDROID_HOME $HOME/Android/Sdk
-set -x PATH $ANDROID_HOME/emulator $PATH
-set -x PATH $ANDROID_HOME/tools $PATH
-set -x PATH $ANDROID_HOME/tools/bin $PATH
-set -x PATH $ANDROID_HOME/platform-tools $PATH
-
-# Configure `fuck` alias
-thefuck --alias | source
 
 # Start Sway if running from tty1
 if test (tty) = "/dev/tty1"
