@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPT_PATH="$(dirname $(realpath -s $0))"
+SCRIPT_PATH="$(dirname "$(realpath -s "$0")")"
 
 mkdir -p "$HOME/.config/waybar"
 

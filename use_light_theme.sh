@@ -5,7 +5,7 @@ GTK_THEME="Ayu"
 GTK_ICON_THEME="Papirus"
 GTK_SCHEMA="org.gnome.desktop.interface"
 KVANTUM_THEME="Ayu"
-SCRIPT_PATH="$(dirname $(realpath -s $0))"
+SCRIPT_PATH="$(dirname "$(realpath -s "$0")")"
 
 # Set GTK3+ theme
 gsettings set $GTK_SCHEMA gtk-theme "$GTK_THEME"

@@ -10,7 +10,7 @@
 
 set -eu
 
-SCRIPT_PATH="$(dirname $(realpath -s $0))"
+SCRIPT_PATH="$(dirname "$(realpath -s "$0")")"
 ENV_FILE="$SCRIPT_PATH/.env"
 
 # Load environment file
@@ -25,7 +25,7 @@ fi
 LOCATION="https://api.darksky.net/forecast/${DOTSIES_WEATHER_API_KEY}/62.3908,17.3069?units=si&exclude=minutely,hourly,daily,alerts,flags"
 
 # Get weather
-WEATHER="$(curl -s $LOCATION)"
+WEATHER="$(curl -s "$LOCATION")"
 
 # Get condition
 [[ "$WEATHER" =~ \"icon\":\"([^\"]*)\" ]]
@@ -36,31 +36,31 @@ CONDITION="${BASH_REMATCH[1]}"
 TEMPERATURE="${BASH_REMATCH[1]}"
 
 # Print custom weather string
-if grep -qi 'rain' <<< $CONDITION; then
+if grep -qi "rain" <<< "$CONDITION"; then
   printf " Shit weather"
 
-elif grep -qi 'snow' <<< $CONDITION; then
+elif grep -qi "snow" <<< "$CONDITION"; then
 	printf " Shit weather"
 
-elif grep -qi 'wind' <<< $CONDITION; then
+elif grep -qi "wind" <<< "$CONDITION"; then
 	printf " Shit weather"
 
-elif grep -qi 'sleet' <<< $CONDITION; then
+elif grep -qi "sleet" <<< "$CONDITION"; then
 	printf " Shit weather"
 
-elif grep -qi 'cloudy' <<< $CONDITION; then
+elif grep -qi "cloudy" <<< "$CONDITION"; then
   printf " Boring weather"
 
-elif grep -qi 'fog' <<< $CONDITION; then
+elif grep -qi "fog" <<< "$CONDITION"; then
 	printf " Boring weather"
 
-elif grep -qi 'partly-cloudy' <<< $CONDITION; then
+elif grep -qi "partly-cloudy" <<< "$CONDITION"; then
   printf " Decent weather"
 
-elif grep -qi 'clear-day' <<< $CONDITION; then
+elif grep -qi "clear-day" <<< "$CONDITION"; then
   printf " Great weather"
 
-elif grep -qi 'clear-night' <<< $CONDITION; then
+elif grep -qi "clear-night" <<< "$CONDITION"; then
 	printf " Great weather"
 
 else
@@ -74,7 +74,7 @@ printf " "
 LC_ALL=C /usr/bin/printf '%.0f' " $TEMPERATURE"
 
 # Print unit character
-if grep -qi 'units=us' <<< $LOCATION; then
+if grep -qi 'units=us' <<< "$LOCATION"; then
 	printf "°F"
 else
 	printf "°C"
