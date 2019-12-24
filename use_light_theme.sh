@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 FONT="SF Pro Text Regular 9"
 GTK_THEME="Ayu"

@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/usr/bin/env bash
 #
 # Fetches weather from Dark Sky API for display in status bar. Requires API key
 # (1000 free requests/day--about one per 90 seconds). The API key is specified
