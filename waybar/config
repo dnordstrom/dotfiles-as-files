@@ -16,7 +16,7 @@
   "modules-right": [
     "tray",
     "idle_inhibitor",
-    "custom/darksky",
+    "custom/wttr",
     "custom/disks",
     "memory",
     "cpu",
