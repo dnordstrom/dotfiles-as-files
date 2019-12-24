@@ -1,5 +1,5 @@
 {
-  "name": "ayu-mirage", /* Options: ayu, ayu-mirage, ayu-dark */
+  "name": "ayu-mirage" /* Options: ayu, ayu-mirage, ayu-dark */,
   "layer": "top",
   "position": "top",
   "height": 30,
@@ -12,7 +12,7 @@
     "custom/files",
     "sway/mode"
   ],
-  "modules-center": [ "clock" ],
+  "modules-center": ["clock"],
   "modules-right": [
     "tray",
     "idle_inhibitor",
@@ -33,13 +33,13 @@
     "format": "<span style=\"italic\">{}</span>"
   },
   "sway/workspaces": {
-    "persistant_workspaces": {
-      "1": [ "DP-1" ],
-      "2": [ "DP-1" ],
-      "3": [ "DP-1" ],
-      "4": [ "DVI-D-1" ],
-      "5": [ "DVI-D-1" ],
-      "6": [ "DVI-D-1" ]
+    "persistent_workspaces": {
+      "1": ["DP-1"],
+      "2": ["DP-1"],
+      "3": ["DP-1"],
+      "4": ["DVI-D-1"],
+      "5": ["DVI-D-1"],
+      "6": ["DVI-D-1"]
     }
   },
   "tray": {
@@ -52,34 +52,34 @@
     "tooltip": false
   },
   "custom/system": {
-    "format":"",
+    "format": "",
     "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl poweroff'",
     "on-click-right": "swaymsg mode System"
   },
   "custom/browser": {
-    "format":"",
+    "format": "",
     "tooltip": false,
     "on-click": "if pgrep -x firefox-bin; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi",
     "on-click-right": "firefox-nightly --new-window"
   },
   "custom/files": {
-    "format":"",
+    "format": "",
     "tooltip": false,
     "on-click": "nautilus"
   },
   "custom/editor": {
-    "format":"",
+    "format": "",
     "tooltip": false,
-    "on-click": "if pgrep -x code-insiders > /dev/null 2>&1; then swaymsg [title=\"Insiders\"] focus; else GDK_BACKEND=x11 code-insiders; fi",
+    "on-click": "if pgrep -x code-insiders > /dev/null 2>&1; then swaymsg [title=\"Insiders\"] focus; else env GDK_BACKEND=x11 code-insiders; fi"
   },
   "custom/terminal": {
-    "format":"",
+    "format": "",
     "tooltip": false,
     "on-click": "swaymsg scratchpad show",
     "on-click-right": "urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
   },
   "custom/disks": {
-    "exec":"df --output=avail -h \"$PWD\" | sed '1d;s/[^0-9]//g'",
+    "exec": "df --output=avail -h \"$PWD\" | sed '1d;s/[^0-9]//g'",
     "format": " {}GB",
     "on-click": "urxvt -hold -T popup_term -e gotop",
     "interval": 10,
@@ -88,7 +88,7 @@
   "disk": {
     "interval": 30,
     "format": " {free}GB",
-	  "path": "/",
+    "path": "/",
     "on-click": "urxvt -hold -T popup_term -e gotop",
     "tooltip": false
   },
@@ -108,8 +108,8 @@
     "format": "{icon}",
     "tooltip": false,
     "format-icons": {
-        "activated": "",
-        "deactivated": ""
+      "activated": "",
+      "deactivated": ""
     }
   },
   "pulseaudio": {
@@ -117,13 +117,13 @@
     "format-bluetooth": "{icon} ",
     "format-muted": "",
     "format-icons": {
-        "headphones": "",
-        "handsfree": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""]
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
     },
     "scroll-step": 5,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
