@@ -263,6 +263,9 @@ bindsym $mod+Delete mode "$mode_system"
 exec $term -T scratchpad_term
 for_window [title="^scratchpad_term$"] move scratchpad
 
+# Start notification daemon
+exec mako
+
 
 
 #
