@@ -15,6 +15,7 @@ ENV_FILE="$SCRIPT_PATH/.env"
 
 # Load environment file
 if [[ -f "$ENV_FILE" ]]; then
+  # shellcheck source=/dev/null
   source "$ENV_FILE"
 else
   echo "Missing API key"
