@@ -53,7 +53,7 @@
   },
   "custom/system": {
     "format": "",
-    "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl poweroff'",
+    "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reload' 'swaymsg reload' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl poweroff'",
     "on-click-right": "swaymsg mode System"
   },
   "custom/browser": {
@@ -65,12 +65,12 @@
   "custom/files": {
     "format": "",
     "tooltip": false,
-    "on-click": "nautilus"
+    "on-click": "dolphin"
   },
   "custom/editor": {
     "format": "",
     "tooltip": false,
-    "on-click": "if pgrep -x code-insiders > /dev/null 2>&1; then swaymsg [title=\"Insiders\"] focus; else env GDK_BACKEND=x11 code-insiders; fi"
+    "on-click": "if pgrep -x code-insiders; then swaymsg [instance=\"code - insiders\"] focus; else env GDK_BACKEND=x11 code-insiders; fi"
   },
   "custom/terminal": {
     "format": "",
