@@ -27,17 +27,41 @@ alias set-cpu-schedutil="echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/
 function fish_greeting
 end
 
+# Adds directory to PATH if it's valid and not already included
+function add_to_path
+  set target "$argv[1]"
+
+  if test -d $target; and not contains $target $PATH
+    set -gx PATH $target $PATH
+  end
+end
+
+# Adds directory to XDG_DATA_DIRS if it's valid and not already included
+function add_to_xdg_data
+  set target "$argv[1]"
+
+  if not test -n "$XDG_DATA_DIRS"
+    set -gx XDG_DATA_DIRS $target
+  else if test -d $target; and not string match -qe -- $target $XDG_DATA_DIRS
+    set -gx XDG_DATA_DIRS $target:$XDG_DATA_DIRS
+  end
+end
+
 
 
 #
 # Miscellaneous
 #
 
-# Add Yarn global executables to path (array format)
-set -gx PATH /var/lib/flatpak/exports/bin (yarn global bin) $PATH
+# Path directories
+add_to_path /var/lib/flatpak/exports/bin
+add_to_path (yarn global bin)
 
-# Add Flatpak to XDG data directories (comma delimited string format)
-set -gx XDG_DATA_DIRS /var/lib/flatpak/exports/share:$HOME/.local/share:/usr/local/share:/usr/share
+# XDG data directories
+add_to_xdg_data /var/lib/flatpak/exports/share
+add_to_xdg_data $HOME/.local/share
+add_to_xdg_data /usr/local/share
+add_to_xdg_data /usr/share
 
 # Start Sway if running from tty1
 if test (tty) = "/dev/tty1"
