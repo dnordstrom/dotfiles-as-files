@@ -3,6 +3,15 @@
 ! Dark version with Mirage as colors 8-15
 !
 
+! Options
+
+URxvt.perl-ext:           default,matcher
+urxvt.url-launcher:       /usr/bin/firefox-nightly
+urxvt.matcher.button:     1
+urxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+! Appearance
+
 urxvt*font:             xft:Hack:size=8
 urxvt*termName:         rxvt
 urxvt*scrollBar:        false
