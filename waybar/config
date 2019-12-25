@@ -1,5 +1,5 @@
 {
-  "name": "ayu-mirage" /* Options: ayu, ayu-mirage, ayu-dark */,
+  "name": "ayu-mirage", /* Options: ayu, ayu-mirage, ayu-dark */
   "layer": "top",
   "position": "top",
   "height": 30,
@@ -65,7 +65,7 @@
   "custom/files": {
     "format": "",
     "tooltip": false,
-    "on-click": "dolphin"
+    "on-click": "nautilus"
   },
   "custom/editor": {
     "format": "",

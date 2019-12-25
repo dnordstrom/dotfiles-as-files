@@ -33,8 +33,11 @@ end
 # Miscellaneous
 #
 
-# Add Yarn global executables to path
-set -x PATH (yarn global bin) $PATH
+# Add Yarn global executables to path (array format)
+set -gx PATH /var/lib/flatpak/exports/bin (yarn global bin) $PATH
+
+# Add Flatpak to XDG data directories (comma delimited string format)
+set -gx XDG_DATA_DIRS /var/lib/flatpak/exports/share:$HOME/.local/share:/usr/local/share:/usr/share
 
 # Start Sway if running from tty1
 if test (tty) = "/dev/tty1"
