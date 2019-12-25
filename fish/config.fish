@@ -23,11 +23,11 @@ alias set-cpu-schedutil="echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/
 # Functions
 #
 
-# Disable greeting
+# Disables default greeting.
 function fish_greeting
 end
 
-# Adds directory to PATH if it's valid and not already included
+# Adds directory to PATH if it's valid and not already included.
 function add_to_path
   set target "$argv[1]"
 
@@ -36,13 +36,15 @@ function add_to_path
   end
 end
 
-# Adds directory to XDG_DATA_DIRS if it's valid and not already included
+# Adds directory to XDG_DATA_DIRS if it's valid and not already included.
 function add_to_xdg_data
   set target "$argv[1]"
 
-  if not test -n "$XDG_DATA_DIRS"
+  if test -d $target; and not test -n "$XDG_DATA_DIRS"
+    # XDG_DATA_DIRS is empty, let's set it
     set -gx XDG_DATA_DIRS $target
   else if test -d $target; and not string match -qe -- $target $XDG_DATA_DIRS
+    # XDG_DATA_DIRS exists, append to it
     set -gx XDG_DATA_DIRS $target:$XDG_DATA_DIRS
   end
 end
