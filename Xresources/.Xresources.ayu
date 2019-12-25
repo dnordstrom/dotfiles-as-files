@@ -11,11 +11,6 @@ urxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 ! Appearance
 
-urxvt.perl-ext-common:      font-size,default,matcher,url-select,keyboard-select
-urxvt.url-select.launcher:  firefox
-urxvt.matcher.button:       1
-urxvt.matcher.pattern.1:    \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
-
 urxvt*font:             xft:Hack:size=8
 urxvt*termName:         rxvt
 urxvt*scrollBar:        false
