@@ -47,8 +47,8 @@
     "spacing": 22
   },
   "clock": {
-    "format": "{:%-H:%M}",
-    "format-alt": "{:%A, %B %-d}",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d}",
     "tooltip": false
   },
   "custom/system": {
