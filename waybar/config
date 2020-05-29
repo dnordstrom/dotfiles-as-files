@@ -93,8 +93,8 @@
     "tooltip": false
   },
   "custom/wttr": {
-    "exec": "curl wttr.in/Sundsvall?format=\"%c+%t\"",
-    "on-click": "urxvt -hold -T popup_term -e curl wttr.in/Sundsvall",
+    "exec": "curl wttr.in/Sundsvall,Sweden?format=\"%c+%t\"",
+    "on-click": "urxvt -hold -T popup_term -e curl wttr.in/Sundsvall,Sweden",
     "interval": 1800,
     "tooltip": false
   },

@@ -90,13 +90,12 @@ output DVI-D-1 {
 # Inputs
 #
 
-# Keyboard
-input "9456:322:Metadot_-_Das_Keyboard_D4269" {
+input type:keyboard {
   repeat_delay 250
   repeat_rate 35
 
   xkb_layout us,se
-  xkb_options caps:escape,grp:menu_toggle 
+  xkb_options caps:escape,grp:menu_toggle,grp:alt_shift_toggle
 }
 
 

@@ -18,6 +18,13 @@ add_to_xdg_data /usr/local/share
 add_to_xdg_data /usr/share
 
 #
+# Variables
+#
+
+# 1Password
+set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys
+
+#
 # Startup
 #
 
