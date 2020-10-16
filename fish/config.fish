@@ -4,6 +4,15 @@
 #
 
 #
+# Variables
+#
+
+# 1Password
+set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys
+
+
+
+#
 # Paths
 #
 
@@ -17,12 +26,16 @@ add_to_xdg_data $HOME/.local/share
 add_to_xdg_data /usr/local/share
 add_to_xdg_data /usr/share
 
+
+
 #
-# Variables
+# Includes
 #
 
-# 1Password
-set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys
+source $__fish_config_dir/abbreviations.fish
+source $__fish_config_dir/aliases.fish
+
+
 
 #
 # Startup

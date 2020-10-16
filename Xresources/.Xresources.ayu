@@ -7,7 +7,8 @@
 urxvt.perl-ext:           default,matcher,selection-to-clipboard
 urxvt.url-launcher:       /usr/bin/firefox-nightly
 urxvt.matcher.button:     1
-urxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+urxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]A
+urxvt.perl-ext-common:    "default, -searchable-scrollback"
 
 ! Appearance
 

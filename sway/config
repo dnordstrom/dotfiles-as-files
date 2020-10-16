@@ -190,8 +190,8 @@ bindsym $mod+Shift+f fullscreen
 # Floating mode
 bindsym $mod+f floating toggle
 
-# Swap focus between tiling area and floating area
-bindsym $mod+a focus mode_toggle
+# Cross over between tiling area and floating area
+bindsym $mod+x focus mode_toggle
 
 # Move focus to parent
 bindsym $mod+u focus parent
