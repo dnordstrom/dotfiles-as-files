@@ -19,6 +19,7 @@ set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys
 # Path directories
 add_to_path /var/lib/flatpak/exports/bin
 add_to_path (yarn global bin)
+add_to_path $HOME/.local/bin
 
 # XDG data directories
 add_to_xdg_data /var/lib/flatpak/exports/share

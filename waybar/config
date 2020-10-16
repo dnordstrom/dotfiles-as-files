@@ -85,18 +85,20 @@
     "on-click-right": "urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term"
   },
   "custom/disks": {
-    "exec": "df --output=used -h \"$PWD\" | sed '1d;s/[^0-9]//g'",
-    "format": " {}GB",
+    "exec": "/home/dnordstrom/Code/dotfiles/scripts/disks/disks.sh",
+    "return-type": "json",
+    "format": " {}",
     "on-click": "urxvt -hold -T popup_term -e gotop",
-    "interval": 10,
-    "tooltip": false
+    "interval": 30,
+    "tooltip": true
   },
   "disk": {
     "interval": 30,
-    "format": " {free}GB",
+    "format": " {percentage_used}%",
     "path": "/",
     "on-click": "urxvt -hold -T popup_term -e gotop",
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "{used} / {total}"
   },
   "custom/wttr": {
     "exec": "curl wttr.in/Sundsvall,Sweden?format=\"%c+%t\"",

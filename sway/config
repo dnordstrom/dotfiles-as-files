@@ -250,7 +250,7 @@ mode "$mode_system" {
   bindsym Space mode "default"
 }
 
-bindsym $mod+Delete mode "$mode_system"
+bindsym $mod+Backspace mode "$mode_system"
 
 
 
