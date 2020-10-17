@@ -10,6 +10,6 @@ df -Ph "$HOME" | tail -n 1 | \
             used: .[2],
             free: .[3],
             percentage_used: .[4],
-            text: "\(.[4])",
+            text: "\(.[3])B",
             tooltip: "\(.[2])B / \(.[1])B"
            }'
