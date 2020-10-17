@@ -32,6 +32,9 @@ set $workspace6 6
 set $term urxvt
 set $menu rofi -show combi | xargs swaymsg exec
 set $files nautilus
+set $screenshot-region screensnap
+set $screenshot-window screensnap --window
+set $screenshot-screen screensnap --screen
 
 
 
@@ -130,6 +133,11 @@ bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 bindsym $mod+space exec $menu
 bindsym $mod+g exec $files
+
+# Screenshots
+bindsym Escape+1 exec $screenshot-region
+bindsym Escape+2 exec $screenshot-window
+bindsym Escape+3 exec $screenshot-screen
 
 # Kill active window
 bindsym $mod+q kill
