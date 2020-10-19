@@ -291,12 +291,14 @@ bar {
 
 assign [class="^Steam$"] $workspace5
 
-for_window [class="^dolphin$"] floating enable
-for_window [app_id="^org.gnome.Nautilus$"] floating enable
-for_window [app_id="^pavucontrol$"] floating enable
-for_window [title="^transparent_term$"] border none
-for_window [title="^popup_term$"] floating enable, resize set 920 720
-for_window [title="^scratchpad_term$"] floating enable, resize set 720 540
+for_window [class="dolphin"] floating enable
+for_window [class="qimgv"] floating enable
+for_window [class="qview"] floating enable
+for_window [app_id="org.gnome.Nautilus"] floating enable
+for_window [app_id="pavucontrol"] floating enable
+for_window [title="transparent_term"] border none
+for_window [title="popup_term"] floating enable, resize set 920 720
+for_window [title="scratchpad_term"] floating enable, resize set 720 540
 
 
 
