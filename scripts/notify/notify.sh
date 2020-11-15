@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 #
-# Uses `slurp` to let us select an area to screenshot with `grim`.
-#
-# USAGE:
-#   `./snap_area.sh [TARGET FILE]`
+# Some sane defaults for sending notifications.
 #
 
 set -eu

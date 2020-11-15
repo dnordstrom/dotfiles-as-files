@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=Code/dotfiles/scripts/colorsnap/colorsnap.sh
+Icon=display
+Type=Application
+Name=Color Snap
+Comment=Color Snap
+Categories=Utility;

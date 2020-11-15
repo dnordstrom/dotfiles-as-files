@@ -2,6 +2,6 @@
 Exec=Code/dotfiles/scripts/screensnap/screensnap.sh
 Icon=display
 Type=Application
-Name=Screensnap
-Comment=Screensnap
+Name=Screen Snap
+Comment=Screen Snap
 Categories=Utility;
