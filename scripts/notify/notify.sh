@@ -15,7 +15,7 @@ DESCRIPTION:
 
 OPTIONS:
     --help, -h        Show this help text
-    --message, -m           Notification message"
+    --message, -m     Notification message"
 
 # Parse flags and parameters. Credit to Richard Blechinger, see article at:
 # https://pretzelhands.com/posts/command-line-flags
