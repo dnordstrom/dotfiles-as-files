@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 #
-# Uses `slurp` to let us select an area to screenshot with `grim`.
-#
-# USAGE:
-#   `./snap_area.sh [TARGET FILE]`
+# Some sane defaults for sending notifications.
 #
 
 set -eu
@@ -18,7 +15,7 @@ DESCRIPTION:
 
 OPTIONS:
     --help, -h        Show this help text
-    --message, -m           Notification message"
+    --message, -m     Notification message"
 
 # Parse flags and parameters. Credit to Richard Blechinger, see article at:
 # https://pretzelhands.com/posts/command-line-flags
