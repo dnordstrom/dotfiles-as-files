@@ -3,13 +3,13 @@
 #
 
 # Font
-set $font SF Pro Text Semibold 9
+set $font Fira Sans Semibold 9
 
 # Color scheme
 set $colors ayu-mirage
 
 # Background image
-set $background andre-benz-cXU6tNxhub0-unsplash.jpg
+set $background wallpaperlare.jpg
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
@@ -29,8 +29,8 @@ set $workspace5 5
 set $workspace6 6
 
 # Commands
-set $term urxvt
-set $menu rofi -show combi | xargs swaymsg exec
+set $term alacritty
+set $menu ulauncher | xargs swaymsg exec
 set $files nautilus
 set $screenshot-region screensnap
 set $screenshot-window screensnap --window
@@ -49,7 +49,7 @@ gaps outer 0
 
 default_border pixel 2
 
-seat seat0 xcursor_theme Quintom_Snow 24
+# seat seat0 xcursor_theme Quintom_Snow 24
 
 
 
@@ -60,9 +60,9 @@ seat seat0 xcursor_theme Quintom_Snow 24
 workspace $workspace1 output DP-1
 workspace $workspace2 output DP-1
 workspace $workspace3 output DP-1
-workspace $workspace4 output DVI-D-1
-workspace $workspace5 output DVI-D-1
-workspace $workspace6 output DVI-D-1
+workspace $workspace4 output eDP-1
+workspace $workspace5 output eDP-1
+workspace $workspace6 output eDP-1
 
 
 
@@ -76,17 +76,19 @@ output * {
 }
 
 # Left monitor
-output DP-1 {
-  mode 1920x1080@144.001007Hz
+output eDP-1 {
+  mode 3840x2160@60Hz
   position 0,0
+  scale 2
 }
 
 # Right monitor
-output DVI-D-1 {
-  mode 1920x1080@60Hz
+output DP-1 {
+  mode 3440x1440@60Hz
   position 1920,0
+  scale 1
 }
-	
+
 
 
 #
@@ -267,11 +269,14 @@ bindsym $mod+Backspace mode "$mode_system"
 #
 
 # Open a terminal on scratchpad
-exec $term -T scratchpad_term
+exec $term -t scratchpad_term
 for_window [title="^scratchpad_term$"] move scratchpad
 
 # Start notification daemon
 exec mako
+
+# Ulauncher
+exec GDK_BACKEND=wayland ulauncher --hide-window
 
 
 
@@ -291,6 +296,7 @@ bar {
 
 assign [class="^Steam$"] $workspace5
 
+for_window [app_id="ulauncher"] floating enable, border none
 for_window [class="dolphin"] floating enable
 for_window [class="qimgv"] floating enable
 for_window [class="qview"] floating enable

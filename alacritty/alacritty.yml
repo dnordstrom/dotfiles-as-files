@@ -10,6 +10,7 @@ window:
     x: 12
     y: 8
   dynamic_padding: true
+  decorations: none
 background_opacity: 0.92
 schemes:
   ayu_dark: &ayu_dark
@@ -83,4 +84,4 @@ schemes:
       magenta: '#AD7FA8'
       cyan:    '#34E2E2'
       white:   '#EEEEEC'
-colors: *ayu_mirage
+colors: *pop_os
