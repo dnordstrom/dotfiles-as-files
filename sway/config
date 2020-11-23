@@ -103,6 +103,10 @@ input type:keyboard {
   xkb_options caps:escape,grp:menu_toggle,grp:alt_shift_toggle
 }
 
+input type:touchpad {
+  tap enabled
+}
+
 
 
 #
