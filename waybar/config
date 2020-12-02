@@ -2,24 +2,15 @@
   "name": "ayu-mirage", /* Options: ayu, ayu-mirage, ayu-dark */
   "layer": "top",
   "position": "top",
-  "height": 30,
+  "height": 36,
   "modules-left": [
     "sway/workspaces",
-    "custom/terminal",
-    "custom/editor",
-    "custom/browser",
-    "custom/files",
     "sway/mode"
   ],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
-    "custom/pacman",
-    "idle_inhibitor",
     "custom/wttr",
-    "custom/disks",
-    "memory",
-    "cpu",
     "temperature",
     "pulseaudio",
     "network",

@@ -22,8 +22,16 @@
   color: #b3b1ad;
 }
 
-#workspaces {
-  margin-right: 6px;
+#workspaces,
+#clock,
+#tray,
+#network,
+#pulseaudio,
+#custom-wttr,
+#custom-system {
+  background: #1f2430;
+  border-radius: 3px;
+  margin: 5px 5px 5px 5px;
 }
 
 #workspaces button {
@@ -81,14 +89,10 @@
   padding: 0 12px;
 }
 
-#tray {
-  opacity: 0.8;
-}
-
 #custom-system {
   margin-right: 6px;
 }
 
-#workspaces {
-  margin: 0 3px 0 1px;
+#clock {
+  padding: 0 8px;
 }

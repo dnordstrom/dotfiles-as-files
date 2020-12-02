@@ -9,7 +9,7 @@ set $font Fira Sans Semibold 9
 set $colors ayu-mirage
 
 # Background image
-set $background wallpaperlare.jpg
+set $background mountain.jpeg
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
@@ -30,7 +30,7 @@ set $workspace6 6
 
 # Commands
 set $term alacritty
-set $menu ulauncher | xargs swaymsg exec
+set $menu wofi | xargs swaymsg exec --
 set $files nautilus
 set $screenshot-region screensnap
 set $screenshot-window screensnap --window
@@ -180,6 +180,10 @@ bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace $workspace6
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+$left workspace prev
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+$right workspace next
 
 # Move window to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
