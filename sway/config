@@ -9,7 +9,7 @@ set $font Fira Sans Semibold 9
 set $colors ayu-mirage
 
 # Background image
-set $background mountain.jpeg
+set $background 347092.png
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
