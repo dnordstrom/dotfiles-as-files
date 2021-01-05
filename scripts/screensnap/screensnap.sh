@@ -97,17 +97,17 @@ do
   esac
 done
 
+# Show help if the --help (or -h) flag is used
+if [ "$OPTION_HELP" = true ]; then
+  echo "$USAGE"
+  exit 0
+fi
+
 # Checking if target is writable
 if ! [ "$TARGET" = "false" ] && touch "$TARGET" > /dev/null 2>&1; then
   rm "$TARGET" > /dev/null 2>&1 # Remove temporary file
 else
   echo "Cannot write to $TARGET. Please check that the directory exists and is writable."
-fi
-
-# Show help if the --help (or -h) flag is used
-if [ "$OPTION_HELP" = true ]; then
-  echo "$USAGE"
-  exit 0
 fi
 
 # Use slurp to select a screen, region, or window
