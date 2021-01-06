@@ -81,21 +81,21 @@
   },
   "custom/keyboard": {
     "exec": "/home/dnordstrom/Code/dotfiles/scripts/keyboard/keyboard.sh",
-    "format": " {}",
+    "format": "   {}",
     "interval": 30,
     "tooltip": false
   },
   "custom/disks": {
     "exec": "/home/dnordstrom/Code/dotfiles/scripts/disks/disks.sh",
     "return-type": "json",
-    "format": " {}",
+    "format": "  {}",
     "on-click": "urxvt -hold -T popup_term -e gotop",
     "interval": 30,
     "tooltip": true
   },
   "disk": {
     "interval": 30,
-    "format": " {percentage_used}%",
+    "format": "  {percentage_used}%",
     "path": "/",
     "on-click": "urxvt -hold -T popup_term -e gotop",
     "tooltip": true,
@@ -122,7 +122,7 @@
     }
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-bluetooth": "{icon} ",
     "format-muted": "",
     "format-icons": {
@@ -151,12 +151,12 @@
   "cpu": {
     "on-click": "urxvt -hold -T popup_term -e gotop",
     "tooltip": false,
-    "format": " {}%"
+    "format": "  {}%"
   },
   "network": {
-    "format": "{icon} {ifname}",
-    "format-wifi": "{icon} {essid}",
-    "format-ethernet": "{icon} {ifname}",
+    "format": "{icon}  {ifname}",
+    "format-wifi": "{icon}  {essid}",
+    "format-ethernet": "{icon}  {ifname}",
     "format-disconnected": "Offline",
     "format-icons": {
       "wifi": [""],
@@ -168,7 +168,7 @@
   },
   "memory": {
     "interval": 30,
-    "format": " {avail:0.1f}GB",
+    "format": "  {avail:0.1f}GB",
     "tooltip": true,
     "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB"
   }

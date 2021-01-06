@@ -13,7 +13,7 @@ urxvt.perl-ext-common:    "default, -searchable-scrollback"
 
 ! Appearance
 
-urxvt*font:             xft:Hack:size=8
+urxvt*font:             xft:Hack Nerd Font:size=8
 urxvt*termName:         rxvt
 urxvt*scrollBar:        false
 urxvt*depth:            32
