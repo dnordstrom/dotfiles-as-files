@@ -6,10 +6,10 @@
   "width": 1920,
   "modules-left": [
     "sway/workspaces",
-    "custom/terminal",
-    "custom/editor",
-    "custom/browser",
     "custom/files",
+    "custom/browser",
+    "custom/editor",
+    "custom/terminal",
     "sway/mode"
   ],
   "modules-center": ["clock"],

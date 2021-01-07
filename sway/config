@@ -29,7 +29,7 @@ set $workspace5 5
 set $workspace6 6
 
 # Commands
-set $term urxvt
+set $term termite
 set $menu rofi -show combi | xargs swaymsg exec
 set $files nautilus
 set $screenshot-region screensnap
@@ -56,6 +56,8 @@ seat seat0 xcursor_theme Quintom_Snow 24
 #
 # Workspaces
 #
+
+workspace_auto_back_and_forth yes
 
 workspace $workspace1 output DP-1
 workspace $workspace2 output DP-1
@@ -134,11 +136,6 @@ bindsym $mod+d exec $menu
 bindsym $mod+space exec $menu
 bindsym $mod+g exec $files
 
-# Screenshots
-bindsym Escape+1 exec $screenshot-region
-bindsym Escape+2 exec $screenshot-window
-bindsym Escape+3 exec $screenshot-screen
-
 # Kill active window
 bindsym $mod+q kill
 
@@ -175,13 +172,21 @@ bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace $workspace6
 
-# Move window to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Alt+Left workspace prev_on_output
+bindsym $mod+Alt+Right workspace next_on_output
+bindsym $mod+Alt+$left workspace prev_on_output
+bindsym $mod+Alt+$right workspace next_on_output
+
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+Shift+Tab workspace prev_on_output
+
+# Move window to workspace and focus
+bindsym $mod+Shift+1 move container to workspace $workspace1, workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2, workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3, workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4, workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5, workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6, workspace $workspace6
 
 # Split horizontal or vertical
 bindsym $mod+b splith
@@ -207,7 +212,6 @@ bindsym $mod+u focus parent
 # Scratchpad
 bindsym $mod+Shift+z move scratchpad
 bindsym $mod+z scratchpad show
-bindsym $mod+tab scratchpad show
 
 # Audio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%

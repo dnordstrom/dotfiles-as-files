@@ -4,7 +4,7 @@
 #
 
 [options]
-font = Hack 8
+font = Hack Nerd Font 8
 hyperlinks = true
 cursor_blink = off
 cell_width_scale = 1.3
