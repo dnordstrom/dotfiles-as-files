@@ -48,6 +48,7 @@ gaps inner 14
 gaps outer 0
 
 default_border pixel 2
+default_floating_border pixel 2
 
 seat seat0 xcursor_theme Quintom_Snow 24
 
@@ -134,6 +135,7 @@ for_window [app_id="^.*"] inhibit_idle fullscreen
 floating_modifier $mod normal
 
 # Applications
+## Applications // Terminal // Mod+Return ##
 bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 bindsym $mod+space exec $menu
@@ -306,6 +308,7 @@ for_window [class="qimgv"] floating enable
 for_window [class="qview"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="remontoire"] floating enable
 for_window [title="transparent_term"] border none
 for_window [title="popup_term"] floating enable, resize set 920 720
 for_window [title="scratchpad_term"] floating enable, resize set 720 540
