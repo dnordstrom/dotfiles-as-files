@@ -39,4 +39,4 @@ if [ "$OPTION_HELP" = true ]; then
   exit 0
 fi
 
-notify-send -t 2000 --urgency=low --icon=gtk-dialog-info "MESSAGE"
+notify-send -t 5000 --urgency=low --icon=gtk-dialog-info "MESSAGE"
