@@ -43,6 +43,11 @@ edited) or [this](https://i.imgur.com/gAIHyZ9.jpg)
 **Note:** Only the GTK (and Kvantum) themes have been edited from Arc, not stuff I
 don't use (XFWM, etc.). I disable the rest when building the GTK theme.
 
+## More
+
+Here's a list of useful things not created by me:
+
+* [Add transparency](https://github.com/swaywm/sway/blob/master/contrib/inactive-windows-transparency.py) to inactive windows.
 ## Screenshots
 
 ### Mirage

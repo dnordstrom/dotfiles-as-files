@@ -51,6 +51,9 @@ default_border pixel 2
 
 seat seat0 xcursor_theme Quintom_Snow 24
 
+hide_edge_borders smart
+smart_borders on
+
 
 
 #
@@ -272,10 +275,12 @@ bindsym $mod+Backspace mode "$mode_system"
 
 # Open a terminal on scratchpad
 exec $term -T scratchpad_term
-for_window [title="^scratchpad_term$"] move scratchpad
 
 # Start notification daemon
 exec mako
+
+# Start gamma adjusting daemon (use `gammastep-indicator` for tray icon)
+exec gammastep
 
 
 
@@ -295,6 +300,7 @@ bar {
 
 assign [class="^Steam$"] $workspace5
 
+for_window [title="^scratchpad_term$"] move scratchpad
 for_window [class="dolphin"] floating enable
 for_window [class="qimgv"] floating enable
 for_window [class="qview"] floating enable
