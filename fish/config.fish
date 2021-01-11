@@ -13,6 +13,9 @@ set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys
 # n version manager
 set -x N_PREFIX "$HOME/.n"
 
+# Golang
+set -x GOPATH "$HOME/.go"
+
 
 
 #
@@ -21,9 +24,11 @@ set -x N_PREFIX "$HOME/.n"
 
 # Path directories
 add_to_path /var/lib/flatpak/exports/bin
-add_to_path (yarn global bin)
 add_to_path $HOME/.local/bin
 add_to_path $N_PREFIX/bin
+add_to_path (yarn global bin)
+add_to_path $HOME/.go/bin
+add_to_path $HOME/.cargo/bin
 
 # XDG data directories
 add_to_xdg_data /var/lib/flatpak/exports/share

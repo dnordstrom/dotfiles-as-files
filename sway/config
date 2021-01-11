@@ -184,6 +184,7 @@ bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+$left workspace prev
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+$right workspace next
+bindsym $mod+tab workspace back_and_forth
 
 # Move window to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -217,7 +218,6 @@ bindsym $mod+u focus parent
 # Scratchpad
 bindsym $mod+Shift+z move scratchpad
 bindsym $mod+z scratchpad show
-bindsym $mod+tab scratchpad show
 
 # Audio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%

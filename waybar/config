@@ -10,6 +10,7 @@
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
+    "idle_inhibitor",
     "custom/wttr",
     "temperature",
     "pulseaudio",
@@ -34,7 +35,7 @@
       "6": ["DP-1"]
     },
     "disable-scroll": true,
-    "all-outputs": true,
+    "all-outputs": false,
     "format": "{icon}",
     "format-icons": {
         "1": "",
