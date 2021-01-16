@@ -7,14 +7,12 @@
 # Variables
 #
 
-# 1Password
-set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys
-
-# n version manager
-set -x N_PREFIX "$HOME/.n"
-
-# Golang
-set -x GOPATH "$HOME/.go"
+set -x EDITOR "nvim" # Default editor
+set -x DIFFPROG "nvim -d" # Default diff tool
+set -x TERMINAL "alacritty" # Default terminal
+set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys # 1Password
+set -x N_PREFIX "$HOME/.n" # n version manager
+set -x GOPATH "$HOME/.go" # Golang
 
 
 

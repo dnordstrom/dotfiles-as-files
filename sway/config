@@ -49,8 +49,6 @@ gaps outer 0
 
 default_border pixel 2
 
-# seat seat0 xcursor_theme Quintom_Snow 24
-
 
 
 #
@@ -276,15 +274,20 @@ bindsym $mod+Backspace mode "$mode_system"
 # Autostart
 #
 
-# Open a terminal on scratchpad
+# Terminal on scratchpad
 exec $term -t scratchpad_term
 for_window [title="^scratchpad_term$"] move scratchpad
 
-# Start notification daemon
+# Notification daemon
 exec mako
 
-# Ulauncher
-exec GDK_BACKEND=wayland ulauncher --hide-window
+# GTK settings
+exec_always {
+  gsettings set org.gnome.desktop.interface gtk-theme 'Pop-dark'
+  gsettings set org.gnome.desktop.interface icon-theme 'Pop'
+  gsettings set org.gnome.desktop.interface cursor-theme 'Pop'
+  gsettings set org.gnome.desktop.interface font-name 'Sans 10'
+}
 
 
 
