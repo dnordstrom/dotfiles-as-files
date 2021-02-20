@@ -1,11 +1,10 @@
 .window {
   margin: 12px;
-  min-width: 300px;
+  min-width: 400px;
   min-height: 500px;
 }
 
 *:selected {
-  background-color: @theme_bg_color;
   color: @theme_text_color;
 }
 

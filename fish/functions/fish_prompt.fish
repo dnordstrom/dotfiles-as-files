@@ -82,6 +82,6 @@ function fish_prompt
             set repo_info "$repo_info$dirty"
         end
     end
-
-    echo -n -s $arrow ' '$cwd $repo_info $normal ' '
+    
+    fishline -s $status
 end

@@ -39,10 +39,35 @@ source $__fish_config_dir/aliases.fish
 
 
 #
+# Powerline
+#
+powerline-daemon -q
+set -x POWERLINE_BASH_CONTINUATION 1
+set -x POWERLINE_BASH_SELECT 1
+set -x POWERLINE_CONFIG_COMMAND powerline-config
+
+if status is-interactive
+  set FLINE_PATH $HOME/.config/fish/fishline
+  source $FLINE_PATH/init.fish
+end
+
+
+
+#
+# FZF & FD
+#
+
+set -x FZF_DEFAULT_COMMAND 'fd --hidden --type f --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+
+
+#
 # Startup
 #
 
 # Start Sway if running from tty1
 if test (tty) = "/dev/tty1"
+  set -x XDG_CURRENT_DESKTOP sway
   exec sway
 end
