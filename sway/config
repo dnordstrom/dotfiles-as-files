@@ -149,7 +149,7 @@ bindsym {
   $mod+g exec $files
 
   ## System // Power Menu // Mod+Backspace ##
-  $mod+Backspace exec powermenu
+  $mod+Backspace exec wlogout
 
   ## Window Manager // Kill active window // Mod+Q ##
   $mod+q kill
