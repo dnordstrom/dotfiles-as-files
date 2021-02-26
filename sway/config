@@ -293,8 +293,12 @@ bindsym $mod+Shift+Backspace mode "$mode_system"
 # Autostart
 #
 
+# Fix GTK+ apps taking a long time to launch
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 # Open a terminal on scratchpad
-exec $tern --title scratchpad_term
+exec $term --title scratchpad_term
 
 # Start notification daemon
 exec mako
@@ -342,9 +346,3 @@ for_window [title="scratchpad_term"] floating enable, resize set 720 540
 
 include colors.$colors
 include /etc/sway/config.d/*
-
-#
-# Wrap it up
-#
-
-exec systemctl --user import-environment
