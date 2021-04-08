@@ -1,15 +1,24 @@
 font:
-  family: Hack
+  normal:
+    family: Hack iCursive S12
+  bold:
+    family: Hack iCursive S12
+  italic:
+    family: Hack iCursive S12 
+  bold_italic:
+    family: Hack iCursive S12
   size: 9
-  style: Regular
   offset:
     x: 0
     y: 4
+  glyph_offset:
+    x: 0
+    y: 2
 window:
   padding:
     x: 12
     y: 8
-  dynamic_padding: true
+  dynamic_padding: false
 background_opacity: 0.92
 schemes:
   ayu_dark: &ayu_dark

@@ -29,9 +29,9 @@ set $workspace5 5
 set $workspace6 6
 
 # Commands
-set $term alacritty # ...usually `termite`
+set $term alacritty
 set $menu wofi --show=drun,run | xargs swaymsg exec
-set $files nautilus`
+set $files nautilus
 set $screenshot-region screensnap
 set $screenshot-window screensnap --window
 set $screenshot-screen screensnap --screen
@@ -84,13 +84,13 @@ output * {
 # Left monitor
 output DP-1 {
   mode 1920x1080@144.001007Hz
-  position 0,0
+  position 1920,0
 }
 
 # Right monitor
 output DVI-D-1 {
   mode 1920x1080@60Hz
-  position 1920,0
+  position 0,0
 }
 	
 
@@ -293,21 +293,11 @@ bindsym $mod+Shift+Backspace mode "$mode_system"
 # Autostart
 #
 
-# Fix GTK+ apps taking a long time to launch
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# Start `sway-session` systemd target
+exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
 
 # Open a terminal on scratchpad
 exec $term --title scratchpad_term
-
-# Start notification daemon
-exec mako
-
-# Start gamma adjusting daemon (use `gammastep-indicator` for tray icon)
-exec gammastep
-
-# Start autotiling daemon
-exec autotiling
 
 
 

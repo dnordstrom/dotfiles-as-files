@@ -1,0 +1,11 @@
+[Unit]
+Description=Script for sway and i3 to automatically switch the horizontal / vertical window split orientation
+Documentation=https://github.com/nwg-piotr/autotiling
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/autotiling
+
+[Install]
+WantedBy=sway-session.target
