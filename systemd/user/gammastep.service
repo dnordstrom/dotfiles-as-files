@@ -1,6 +1,5 @@
 [Unit]
-Description=Adjust the color temperature of your screen according to
-your surroundings
+Description=Adjust the color temperature of your screen according to your surroundings
 Documentation=https://gitlab.com/chinstrap/gammastep
 BindsTo=sway-session.target
 

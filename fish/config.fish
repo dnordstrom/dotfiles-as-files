@@ -65,7 +65,7 @@ set -x OP_SESSION_my GZ02dlBObGDXHvY_OAWRmzAxbU6N8awPcrwVJQqDFys
 # Startup
 #
 
-# Start Sway if running from tty1
+# Start Sway (using) if running from tty1
 if test (tty) = "/dev/tty1"
   exec sway-init
 end
