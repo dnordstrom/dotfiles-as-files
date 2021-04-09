@@ -9,7 +9,7 @@ width=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .current_mode.w
 grim -o "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')" "${screenshot_image}"
 
 # Add blur to screenshot
-convert -filter Gaussian -resize 50% -blur 0x1 -resize 200% -fill "$colorize_fill" -colorize 85% "${screenshot_image}" "${screenshot_image}"
+convert -filter Gaussian -resize 50% -blur 0x1 -resize 200% -fill "$colorize_fill" -colorize 90% "${screenshot_image}" "${screenshot_image}"
 
 # Use argument if provided
 if [ -f "$1" ]; then
