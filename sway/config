@@ -32,7 +32,7 @@ set $workspace6 6
 set $term alacritty
 set $menu wofi --show=drun,run | xargs swaymsg exec
 set $files nautilus
-set $powermenu wlogout # Use `scripts/powermenu/powermenu.sh` for wofi menu
+set $powermenu wlogout-init # Use `scripts/powermenu/powermenu.sh` for wofi menu
 set $screenshot-region screensnap
 set $screenshot-window screensnap --window
 set $screenshot-screen screensnap --screen
