@@ -1,19 +1,19 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-action=$(echo -e "Suspend\nLock\nLogout\nShutdown\nReboot" | wofi -d -p "" -L 5)
+action=$(printf "Suspend\nLock\nLogout\nShutdown\nReboot" | wofi -d -p "" -L 5)
 
-if [[ "$action" == "Lock" ]]; then
+if [ "$action" = "Lock" ]; then
   swaylock
 fi
 
-if [[ "$action" == "Log out" ]]; then
+if [ "$action" = "Log out" ]; then
   swaymsg exit
 fi
 
-if [[ "$action" == "Reboot" ]]; then
+if [ "$action" = "Reboot" ]; then
   systemctl reboot
 fi
 
-if [[ "$action" == "Shutdown" ]]; then
+if [ "$action" = "Shutdown" ]; then
   systemctl poweroff
 fi
