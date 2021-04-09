@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock",
+    "action" : "swaylock-init Locked",
     "keybind" : "l"
 }
 {

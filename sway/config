@@ -114,12 +114,14 @@ input type:keyboard {
 # Idle
 #
 
-# Turn off monitor after 5 minutes
-exec swayidle \
-  timeout 300 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"'
+# Turn off monitor after 10 minutes, and lock screen after 30 minutes and before
+# going into sleep mode
+exec swayidle -w \
+  timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+  timeout 1800 'swaylock-init' \
+  before-sleep 'swaylock-init'
 
-# Unless a window is fullscreen
+# Ignore idle if any window is in fullscreen mode
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 
