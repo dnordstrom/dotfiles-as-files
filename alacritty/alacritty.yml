@@ -1,13 +1,12 @@
 font:
   normal:
-    family: Monoisome
-    style: Bold
+    family: SF Mono
   bold:
-    family: Monoisome
+    family: SF Mono
   italic:
-    family: Monoisome
+    family: SF Mono
   bold_italic:
-    family: Monoisome
+    family: SF Mono
   size: 8
   offset:
     x: 0
