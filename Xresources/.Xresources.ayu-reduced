@@ -3,6 +3,16 @@
 !   Brightness reduced by 10 on colors 0-15
 !
 
+! Font rendering
+
+xft.dpi:                  96
+xft.antialias:            true
+xft.hinting:              true
+xft.rgba:                 none
+xft.autohint:             false
+xft.hintstyle:            hintfull
+xft.lcdfilter:            lcddefault
+
 ! Options
 
 urxvt.perl-ext:           default,matcher,selection-to-clipboard
@@ -13,7 +23,7 @@ urxvt.perl-ext-common:    "default, -searchable-scrollback"
 
 ! Appearance
 
-urxvt*font:             xft:Hack:size=8
+urxvt*font:             xft:Monoisome:size=7.5
 urxvt*termName:         rxvt
 urxvt*scrollBar:        false
 urxvt*depth:            32
