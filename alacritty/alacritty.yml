@@ -1,13 +1,13 @@
 font:
   normal:
-    family: SF Mono
+    family: Input
   bold:
-    family: SF Mono
+    family: Input
   italic:
-    family: SF Mono
+    family: Input
   bold_italic:
-    family: SF Mono
-  size: 8
+    family: Input
+  size: 9
   offset:
     x: 0
     y: 0 # 3 along with glyph offset Y of 1 increases line spacing slightly
