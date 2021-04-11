@@ -1,8 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-FONT="SF Pro Text Regular 9"
+printf "\n%s" "Switching GTK and QT/Kvantum to light theme... "
+
+FONT="Input Regular 10"
 GTK_THEME="Ayu"
-GTK_ICON_THEME="Papirus"
+GTK_ICON_THEME="Flat-Remix-Yellow-Light"
 GTK_SCHEMA="org.gnome.desktop.interface"
 KVANTUM_THEME="Ayu"
 SCRIPT_PATH="$(dirname "$(realpath -s "$0")")"
@@ -23,4 +25,8 @@ ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-reduced" "$HOME/.Xdefaults"
 mkdir -p "$HOME/.config/termite"
 ln -sf "$SCRIPT_PATH/termite/config.ayu-reduced" "$HOME/.config/termite/config"
 
-# Also change rofi theme and waybar class in their config files
+#
+# Done
+#
+
+printf "%s\n\n%s\n\n" "Done." "Note: Some applications (e.g., Sway, wofi, and most terminal emulators) require you to manually edit their configuration files to switch themes."

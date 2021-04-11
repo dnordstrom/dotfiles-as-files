@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh 
 #
 # Initialization script for launching `swaylock` and `swaylock-effects`.
 #
