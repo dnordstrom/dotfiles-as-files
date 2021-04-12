@@ -34,4 +34,4 @@ sed -i -e 's/^colors:.*$/colors: \*ayu_mirage/' "$SCRIPT_PATH/alacritty/alacritt
 # Done
 #
 
-printf "%s\n\n%s\n\n" "Done." "Note: Some applications (e.g., Sway, wofi, and most terminal emulators) require you to manually edit their configuration files to switch themes."
+printf "%s\n\n" "Done."
