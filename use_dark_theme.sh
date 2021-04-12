@@ -27,6 +27,9 @@ ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-mirage" "$HOME/.Xdefaults"
 mkdir -p "$HOME/.config/termite"
 ln -sf "$SCRIPT_PATH/termite/config.ayu-mirage" "$HOME/.config/termite/config"
 
+# Alacritty
+sed -i -e 's/^colors:.*$/colors: \*ayu_mirage/' "$SCRIPT_PATH/alacritty/alacritty.yml"
+
 #
 # Done
 #

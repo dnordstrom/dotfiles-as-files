@@ -2,7 +2,7 @@
 
 printf "\n%s" "Switching GTK and QT/Kvantum to light theme... "
 
-FONT="Input Regular 10"
+FONT="Input Regular 9"
 GTK_THEME="Ayu"
 GTK_ICON_THEME="Flat-Remix-Yellow-Light"
 GTK_SCHEMA="org.gnome.desktop.interface"
@@ -24,6 +24,9 @@ ln -sf "$SCRIPT_PATH/Xresources/.Xresources.ayu-reduced" "$HOME/.Xdefaults"
 # Termite
 mkdir -p "$HOME/.config/termite"
 ln -sf "$SCRIPT_PATH/termite/config.ayu-reduced" "$HOME/.config/termite/config"
+
+# Alacritty
+sed -i -e 's/^colors:.*$/colors: \*ayu/' "$SCRIPT_PATH/alacritty/alacritty.yml"
 
 #
 # Done
