@@ -4,7 +4,7 @@ set -eu
 
 printf "\n%s" "Switching GTK and QT/Kvantum to dark theme... "
 
-FONT="Input Regular 10"
+FONT="Input Regular 9"
 GTK_THEME="Ayu-Mirage-Dark"
 GTK_ICON_THEME="Flat-Remix-Yellow-Dark"
 GTK_SCHEMA="org.gnome.desktop.interface"
