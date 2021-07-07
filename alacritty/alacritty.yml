@@ -117,4 +117,4 @@ schemes:
       magenta: '#AD7FA8'
       cyan:    '#34E2E2'
       white:   '#EEEEEC'
-colors: *ayu
+colors: *ayu_mirage
