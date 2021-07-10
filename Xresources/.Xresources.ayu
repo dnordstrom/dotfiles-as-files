@@ -2,6 +2,16 @@
 ! Ayu
 !
 
+! Font rendering
+
+Xft.dpi:                  96
+Xft.antialias:            true
+Xft.hinting:              true
+Xft.rgba:                 none
+Xft.autohint:             false
+Xft.hintstyle:            hintfull
+Xft.lcdfilter:            lcddefault
+
 ! Options
 
 urxvt.perl-ext:           default,matcher,selection-to-clipboard
@@ -12,7 +22,7 @@ urxvt.perl-ext-common:    "default, -searchable-scrollback"
 
 ! Appearance
 
-urxvt*font:             xft:Hack:size=8
+urxvt*font:             xft:SF Mono Regular:size=8
 urxvt*termName:         rxvt
 urxvt*scrollBar:        false
 urxvt*depth:            32

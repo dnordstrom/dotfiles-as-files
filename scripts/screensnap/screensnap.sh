@@ -21,8 +21,8 @@ OPTION_SCREEN=false
 HAS_CURL=false
 AREA=""
 TIMESTAMP="$(date '+%Y%m%d_%H_%M_%S')"
-TARGET="$HOME/Pictures/Screenshots/$TIMESTAMP.png"
-TARGET_DIR="$(dirname $TARGET)"
+TARGET_DIR=${SCREENSNAP_TARGET_DIR:-"$HOME/Pictures/Screensnap"}
+TARGET="$TARGET_DIR/$TIMESTAMP.png"
 IMGUR_CLIENT_ID="${IMGUR_CLIENT_ID:=e4ab8199be97038}"
 USAGE="USAGE:
     $(basename "$0") [options]
@@ -81,7 +81,17 @@ do
     shift
     ;;
     *)
-    TARGET+=("$1")
+    if [ -d "$(realpath "$1" > /dev/null 2>&1)" ]; then
+      # Target is an existing directory
+      TARGET="$(realpath "$1")/$TIMESTAMP.png"
+    elif [ -d "$(dirname "$(realpath "$1" > /dev/null 2>&1)")" ]; then
+      # Target parent is an existing directory, use as full file path
+      TARGET="$(realpath "$(dirname "$1")")/$(basename "$1")"
+      echo "$TARGET"
+    else
+      # Target is invalid
+      TARGET=false
+    fi
     shift
     ;;
   esac
@@ -91,6 +101,13 @@ done
 if [ "$OPTION_HELP" = true ]; then
   echo "$USAGE"
   exit 0
+fi
+
+# Checking if target is writable
+if ! [ "$TARGET" = "false" ] && touch "$TARGET" > /dev/null 2>&1; then
+  rm "$TARGET" > /dev/null 2>&1 # Remove temporary file
+else
+  echo "Cannot write to $TARGET. Please check that the directory exists and is writable."
 fi
 
 # Use slurp to select a screen, region, or window
@@ -107,7 +124,7 @@ grim -g "$AREA" "$TARGET"
 
 # Uses cURL to upload an image to Imgur. Credit to Bart Nagel, see script:
 # https://github.com/tremby/imgur.sh
-function upload {
+upload() {
   curl -s -H "Authorization: Client-ID $IMGUR_CLIENT_ID" -H "Expect: " -F "image=$1" https://api.imgur.com/3/image.xml
 }
 
@@ -116,7 +133,7 @@ if [ "$OPTION_UPLOAD" = true ] && [ "$HAS_CURL" = true ]; then
   RESPONSE=$(upload "@$TARGET") 2>/dev/null
 
   # The cURL command failed
-  if ! RESPONSE=$(upload "@$TARGET"); then
+  if RESPONSE=$(upload "@$TARGET"); then
     echo "Upload failed." >&2
     ERRORS=true
   fi
@@ -153,10 +170,10 @@ else
 fi
 
 # Open the screenshot with image viewer if the --open (or -o) flag is used
-! [ "$OPTION_OPEN_FILE" = true ] || "$IMAGE_VIEWER" "$TARGET" 2> /dev/null &
+[ "$OPTION_OPEN_FILE" = "true" ] || "$IMAGE_VIEWER" "$TARGET" 2> /dev/null &
 
 # Open the containing directory if --directory (or -d) flag is used
-! [ "$OPTION_OPEN_DIR" = true ] || "$FILE_MANAGER" "$TARGET_DIR" 2> /dev/null &
+[ "$OPTION_OPEN_DIR" = "true" ] || "$FILE_MANAGER" "$(basedir "$TARGET")" 2> /dev/null &
 
 echo "$TARGET"
 

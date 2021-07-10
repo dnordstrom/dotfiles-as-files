@@ -3,6 +3,4 @@
 # abbreviation with the specified text
 #
 
-abbr --add gc "git commit -am"
-abbr --add gp "git push"
 abbr --add @home "cd $HOME"

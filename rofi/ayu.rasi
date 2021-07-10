@@ -1,5 +1,12 @@
 /**
  * Ayu theme ported for rofi
+ *
+ * See man page for reference: 
+ * https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown#name-1
+ */
+
+/**
+ * Window
  */
 
 * {
@@ -23,6 +30,10 @@
   padding: 16 14;
   width: 640;
 }
+
+/**
+ * Input box
+ */
 
 #element {
   spacing: 2;
@@ -49,4 +60,16 @@
 
 #entry {
   padding: 2 8 8;
+}
+
+/**
+ * List
+ */
+
+element-icon {
+  size: 24px;
+}
+
+element-text {
+  padding: 4;
 }

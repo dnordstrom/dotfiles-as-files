@@ -4,8 +4,8 @@
 
 * {
   font-weight: 700;
-  font-family: Iosevka, sans-serif;
-  font-size: 12px;
+  font-family: 'Iosevka Nerd Font', sans-serif;
+  font-size: 13px;
 }
 
 #waybar {
@@ -23,7 +23,7 @@
 }
 
 #workspaces {
-  margin-right: 6px;
+  margin: 0 3px 0 1px;
 }
 
 #workspaces button {
@@ -81,14 +81,15 @@
   padding: 0 12px;
 }
 
+#idle_inhibitor {
+  padding: 0 18px;
+}
+
 #tray {
   opacity: 0.8;
+  padding: 8px;
 }
 
 #custom-system {
   margin-right: 6px;
-}
-
-#workspaces {
-  margin: 0 3px 0 1px;
 }

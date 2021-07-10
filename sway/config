@@ -6,10 +6,7 @@
 set $font SF Pro Text Semibold 9
 
 # Color scheme
-set $colors ayu-mirage
-
-# Background image
-set $background andre-benz-cXU6tNxhub0-unsplash.jpg
+set $colors ayu
 
 # Use super as modifier key (Mod1 for Alt)
 set $mod Mod4
@@ -29,9 +26,10 @@ set $workspace5 5
 set $workspace6 6
 
 # Commands
-set $term urxvt
-set $menu rofi -show combi | xargs swaymsg exec
+set $term alacritty
+set $menu wofi --show=drun,run | xargs swaymsg exec
 set $files nautilus
+set $powermenu wlogout-init # Use `scripts/powermenu/powermenu.sh` for wofi menu
 set $screenshot-region screensnap
 set $screenshot-window screensnap --window
 set $screenshot-screen screensnap --screen
@@ -48,14 +46,18 @@ gaps inner 14
 gaps outer 0
 
 default_border pixel 2
+default_floating_border pixel 2
 
-seat seat0 xcursor_theme Quintom_Snow 24
+hide_edge_borders smart
+smart_borders on
 
 
 
 #
 # Workspaces
 #
+
+workspace_auto_back_and_forth yes
 
 workspace $workspace1 output DP-1
 workspace $workspace2 output DP-1
@@ -70,28 +72,27 @@ workspace $workspace6 output DVI-D-1
 # Outputs
 #
 
-# All monitors
-output * {
-  bg ~/Pictures/Wallpapers/$background fill
-}
-
-# Left monitor
+# Primary monitor
 output DP-1 {
   mode 1920x1080@144.001007Hz
+  position 1920,0
+}
+
+# Secondary monitor
+output DVI-D-1 {
+  mode 1920x1080@60Hz
   position 0,0
 }
 
-# Right monitor
-output DVI-D-1 {
-  mode 1920x1080@60Hz
-  position 1920,0
-}
-	
 
 
 #
 # Inputs
 #
+
+seat seat0 xcursor_theme Quintom_Snow 24
+seat seat0 hide_cursor when-typing enable
+seat seat0 idle_wake keyboard
 
 input type:keyboard {
   repeat_delay 250
@@ -107,12 +108,14 @@ input type:keyboard {
 # Idle
 #
 
-# Turn off monitor after 5 minutes
-exec swayidle \
-  timeout 300 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"'
+# Turn off monitor after 10 minutes, and lock screen after 30 minutes and before
+# going into sleep mode
+exec swayidle -w \
+  timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+  timeout 1800 'swaylock-init' \
+  before-sleep 'swaylock-init'
 
-# Unless a window is fullscreen
+# Ignore idle if any window is in fullscreen mode
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 
@@ -125,94 +128,115 @@ for_window [app_id="^.*"] inhibit_idle fullscreen
 # Drag windows by holding down $mod and left mouse button.
 # Resize with right mouse button + $mod.
 # Change normal to inverse to use left button for resizing.
-
 floating_modifier $mod normal
 
-# Applications
-bindsym $mod+Return exec $term
-bindsym $mod+d exec $menu
-bindsym $mod+space exec $menu
-bindsym $mod+g exec $files
+bindsym {
+  # Applications
 
-# Screenshots
-bindsym Escape+1 exec $screenshot-region
-bindsym Escape+2 exec $screenshot-window
-bindsym Escape+3 exec $screenshot-screen
+  ## Applications // Terminal // Mod+Return ##
+  $mod+Return exec $term
 
-# Kill active window
-bindsym $mod+q kill
+  ## Applications // Launcher // Mod+D ##
+  $mod+d exec $menu
 
-# Reload configuration
-bindsym $mod+Shift+c reload
+  ## Applications // Launcher // Mod+Space ##
+  $mod+Space exec $menu
 
-# Move focus
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
+  ## Applications // Files // Mod+G ##
+  $mod+g exec $files
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+  ## System // Power Menu // Mod+Backspace ##
+  $mod+Backspace exec $powermenu
 
-# Move windows
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
+  ## Window Manager // Kill active window // Mod+Q ##
+  $mod+q kill
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+  ## Window Manager // Reload configuration // Mod+Shift-C ##
+  $mod+Shift+c reload
 
-# Focus workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace $workspace6
+  # Move focus
+  $mod+$left focus left
+  $mod+$down focus down
+  $mod+$up focus up
+  $mod+$right focus right
 
-# Move window to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace $workspace6
+  $mod+Left focus left
+  $mod+Down focus down
+  $mod+Up focus up
+  $mod+Right focus right
 
-# Split horizontal or vertical
-bindsym $mod+b splith
-bindsym $mod+v splitv
+  # Move windows
+  $mod+Shift+$left move left
+  $mod+Shift+$down move down
+  $mod+Shift+$up move up
+  $mod+Shift+$right move right
 
-# Layout style
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+  $mod+Shift+Left move left
+  $mod+Shift+Down move down
+  $mod+Shift+Up move up
+  $mod+Shift+Right move right
 
-# Fullscreen
-bindsym $mod+Shift+f fullscreen
+  # Focus workspace
+  $mod+1 workspace $workspace1
+  $mod+2 workspace $workspace2
+  $mod+3 workspace $workspace3
+  $mod+4 workspace $workspace4
+  $mod+5 workspace $workspace5
+  $mod+6 workspace $workspace6
 
-# Floating mode
-bindsym $mod+f floating toggle
+  $mod+Alt+Left workspace prev_on_output
+  $mod+Alt+Right workspace next_on_output
+  $mod+Alt+$left workspace prev_on_output
+  $mod+Alt+$right workspace next_on_output
 
-# Cross over between tiling area and floating area
-bindsym $mod+x focus mode_toggle
+  $mod+Tab workspace next_on_output
+  $mod+Shift+Tab workspace prev_on_output
 
-# Move focus to parent
-bindsym $mod+u focus parent
+  # Move window to workspace and focus
+  $mod+Shift+1 move container to workspace $workspace1, workspace $workspace1
+  $mod+Shift+2 move container to workspace $workspace2, workspace $workspace2
+  $mod+Shift+3 move container to workspace $workspace3, workspace $workspace3
+  $mod+Shift+4 move container to workspace $workspace4, workspace $workspace4
+  $mod+Shift+5 move container to workspace $workspace5, workspace $workspace5
+  $mod+Shift+6 move container to workspace $workspace6, workspace $workspace6
 
-# Scratchpad
-bindsym $mod+Shift+z move scratchpad
-bindsym $mod+z scratchpad show
-bindsym $mod+tab scratchpad show
+  # Split horizontal or vertical
+  $mod+b splith
+  $mod+v splitv
 
-# Audio
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+  # Layout style
+  # $mod+s layout stacking
+
+  ## Window Manager // Layout → Tabbed // Mod+T ##
+  $mod+t layout tabbed
+
+  ## Window Manager // Layout → Split // Mod+S ##
+  $mod+s layout toggle split
+
+  ## Window Manager // Layout → Toggle Floating Mode // Mod+Shift+F ##
+  $mod+Shift+f floating toggle
+
+  ## Window Manager // Layout → Fullscreen // Mod+F ##
+  $mod+f fullscreen
+
+  ## Window Manager // Layout → Toggle between tiling and floating areas // Mod+X ##
+  $mod+x focus mode_toggle
+
+  # Move focus to parent
+  $mod+u focus parent
+
+  # Scratchpad
+  $mod+Shift+z move scratchpad
+  $mod+z scratchpad show
+
+  # Audio
+  XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+  XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+  XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+  # Show keyboard shortcuts
+  $mod+Slash exec remontoire -c ~/.config/sway/config -t ~/.config/remontoire/styles.css
+}
 
 
 
@@ -258,7 +282,7 @@ mode "$mode_system" {
   bindsym Space mode "default"
 }
 
-bindsym $mod+Backspace mode "$mode_system"
+bindsym $mod+Shift+Backspace mode "$mode_system"
 
 
 
@@ -266,12 +290,11 @@ bindsym $mod+Backspace mode "$mode_system"
 # Autostart
 #
 
-# Open a terminal on scratchpad
-exec $term -T scratchpad_term
-for_window [title="^scratchpad_term$"] move scratchpad
+# Start `sway-session` systemd target
+exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
 
-# Start notification daemon
-exec mako
+# Open a terminal on scratchpad
+exec $term --title scratchpad_term
 
 
 
@@ -291,11 +314,13 @@ bar {
 
 assign [class="^Steam$"] $workspace5
 
+for_window [title="^scratchpad_term$"] move scratchpad
 for_window [class="dolphin"] floating enable
 for_window [class="qimgv"] floating enable
 for_window [class="qview"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="remontoire"] floating enable
 for_window [title="transparent_term"] border none
 for_window [title="popup_term"] floating enable, resize set 920 720
 for_window [title="scratchpad_term"] floating enable, resize set 720 540
